@@ -2,24 +2,25 @@
 
 This repository scrapes the official State Council holiday notices for a rolling three-year window and publishes nine ICS calendars that can be subscribed to directly:
 
-- Chinese: Holiday and compensate days
-	`https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/calendars/zh-CN/holiday-and-compensate.ics`
-- Chinese: Holidays only
-	`https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/calendars/zh-CN/holidays-only.ics`
-- Chinese: Compensate working days only
-	`https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/calendars/zh-CN/compensate-working-days-only.ics`
-- English: Holiday and compensate days
-	`https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/calendars/en/holiday-and-compensate.ics`
-- English: Holidays only
-	`https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/calendars/en/holidays-only.ics`
-- English: Compensate working days only
-	`https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/calendars/en/compensate-working-days-only.ics`
-- Russian: Holiday and compensate days
-	`https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/calendars/ru/holiday-and-compensate.ics`
-- Russian: Holidays only
-	`https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/calendars/ru/holidays-only.ics`
-- Russian: Compensate working days only
-	`https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/calendars/ru/compensate-working-days-only.ics`
+## Subscribe
+
+### Chinese
+
+- Holiday and compensate days: [Subscribe](https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/calendars/zh-CN/holiday-and-compensate.ics)
+- Holidays only: [Subscribe](https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/calendars/zh-CN/holidays-only.ics)
+- Compensate working days only: [Subscribe](https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/calendars/zh-CN/compensate-working-days-only.ics)
+
+### English
+
+- Holiday and compensate days: [Subscribe](https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/calendars/en/holiday-and-compensate.ics)
+- Holidays only: [Subscribe](https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/calendars/en/holidays-only.ics)
+- Compensate working days only: [Subscribe](https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/calendars/en/compensate-working-days-only.ics)
+
+### Russian
+
+- Holiday and compensate days: [Subscribe](https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/calendars/ru/holiday-and-compensate.ics)
+- Holidays only: [Subscribe](https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/calendars/ru/holidays-only.ics)
+- Compensate working days only: [Subscribe](https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/calendars/ru/compensate-working-days-only.ics)
 
 Use the raw GitHub URLs above in any calendar app that supports subscribing to an ICS feed.
 
