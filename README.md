@@ -1,6 +1,6 @@
 # China Holiday Calendar
 
-This repository scrapes the latest official State Council holiday notice for mainland China and publishes six ICS calendars:
+This repository scrapes the official State Council holiday notices for a rolling three-year window and publishes six ICS calendars:
 
 - `calendars/zh-CN/holiday-and-compensate.ics`
 - `calendars/zh-CN/holidays-only.ics`
@@ -11,7 +11,8 @@ This repository scrapes the latest official State Council holiday notice for mai
 
 Each calendar:
 
-- uses the official holiday arrangement notice published by the State Council,
+- includes notices for execution year - 1 through execution year + 1 when already published,
+- uses the official holiday arrangement notices published by the State Council,
 - merges consecutive dates into a single all-day event,
 - includes the relevant announcement line in each event description,
 - is regenerated every 12 hours by GitHub Actions.
@@ -33,5 +34,7 @@ PYTHONPATH=src python -m china_holiday_calendar --year 2026
 PYTHONPATH=src python -m china_holiday_calendar --notice-url https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm
 PYTHONPATH=src python -m china_holiday_calendar --output-dir calendars
 ```
+
+`--year` is the anchor year. For example, `--year 2026` tries to include 2025, 2026, and 2027 if their official notices are available.
 
 The generator writes metadata to `calendars/metadata.json`.

@@ -24,6 +24,10 @@ NOTICE_TITLE_TEMPLATE_ZH = "国务院办公厅关于{year}年部分节假日安�
 NOTICE_TITLE_TEMPLATE_EN = (
     "General Office of the State Council Notice on the {year} Public Holiday Arrangements"
 )
+KNOWN_NOTICE_URLS = {
+    2025: "https://www.gov.cn/zhengce/zhengceku/202411/content_6986383.htm",
+    2026: "https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm",
+}
 HOLIDAY_NAME_TRANSLATIONS = {
     "元旦": "New Year's Day",
     "春节": "Spring Festival",
@@ -79,10 +83,10 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     with requests.Session() as session:
         session.headers.update({"User-Agent": USER_AGENT})
-        notice = fetch_notice(session, args.year, args.notice_url)
+        notices = fetch_notices(session, args.year, args.notice_url)
 
-    write_calendars(notice, output_dir)
-    write_metadata(notice, output_dir)
+    write_calendars(notices, output_dir)
+    write_metadata(notices, output_dir)
     return 0
 
 
@@ -93,7 +97,7 @@ def parse_args(argv: Sequence[str] | None) -> argparse.Namespace:
     parser.add_argument(
         "--year",
         type=int,
-        help="Holiday year to fetch. Defaults to the latest published official notice.",
+        help="Anchor year for the output window. The generator fetches anchor year - 1 through anchor year + 1.",
     )
     parser.add_argument(
         "--output-dir",
@@ -108,44 +112,76 @@ def parse_args(argv: Sequence[str] | None) -> argparse.Namespace:
     return parser.parse_args(argv)
 
 
-def fetch_notice(
+def fetch_notices(
     session: requests.Session,
     requested_year: int | None,
     notice_url: str | None,
-) -> Notice:
+) -> tuple[Notice, ...]:
     if notice_url:
-        return parse_notice_page(session, notice_url, requested_year)
+        return (parse_notice_page(session, notice_url, requested_year),)
 
-    candidate_years = [requested_year] if requested_year else latest_candidate_years()
-    last_error: Exception | None = None
+    anchor_year = requested_year or datetime.now(timezone.utc).year
+    target_years = [anchor_year - 1, anchor_year, anchor_year + 1]
+    notices: list[Notice] = []
 
-    for year in candidate_years:
+    for year in target_years:
         try:
             url = discover_notice_url(session, year)
-            return parse_notice_page(session, url, year)
-        except Exception as exc:
-            last_error = exc
+            notices.append(parse_notice_page(session, url, year))
+        except Exception:
+            continue
 
-    if last_error is None:
-        raise RuntimeError("No candidate years were available for discovery.")
-    raise RuntimeError("Unable to discover an official holiday notice.") from last_error
-
-
-def latest_candidate_years() -> list[int]:
-    current_year = datetime.now(timezone.utc).year
-    return [current_year + 1, current_year, current_year - 1]
+    if not notices:
+        raise RuntimeError("Unable to discover any official holiday notices for the requested window.")
+    return tuple(sorted(notices, key=lambda notice: notice.holiday_year))
 
 
 def discover_notice_url(session: requests.Session, year: int) -> str:
     title = NOTICE_TITLE_TEMPLATE_ZH.format(year=year)
+    known_url = KNOWN_NOTICE_URLS.get(year)
+    if known_url and notice_page_matches(session, known_url, title):
+        return known_url
+
     query = f"site:gov.cn {title}"
-    candidates = discover_notice_urls_with_playwright(query)
+    candidates = discover_notice_urls(session, query)
 
     for candidate in candidates:
         if notice_page_matches(session, candidate, title):
             return candidate
 
     raise RuntimeError(f"Could not find an official notice URL for {year}.")
+
+
+def discover_notice_urls(session: requests.Session, query: str) -> list[str]:
+    candidates = discover_notice_urls_with_bing_html(session, query)
+    if candidates:
+        return candidates
+    return discover_notice_urls_with_playwright(query)
+
+
+def discover_notice_urls_with_bing_html(session: requests.Session, query: str) -> list[str]:
+    response = session.get(
+        "https://cn.bing.com/search",
+        params={"q": query, "rdr": "1", "mkt": "zh-CN"},
+        headers={"Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8"},
+        timeout=30,
+    )
+    response.raise_for_status()
+    soup = BeautifulSoup(response.text, "html.parser")
+
+    candidates: list[str] = []
+    for anchor in soup.select("main a[href], #b_results a[href]"):
+        href = anchor.get("href", "")
+        if href.startswith("https://www.gov.cn/zhengce/zhengceku/") and "content_" in href:
+            candidates.append(href)
+
+    if not candidates:
+        candidates = re.findall(
+            r"https://www\.gov\.cn/zhengce/zhengceku/\d+/content_\d+\.htm",
+            response.text,
+        )
+
+    return dedupe(candidates)
 
 
 def discover_notice_urls_with_playwright(query: str) -> list[str]:
@@ -368,7 +404,7 @@ def translate_holiday_name(holiday_name_zh: str) -> str:
     return " / ".join(translated)
 
 
-def write_calendars(notice: Notice, output_dir: Path) -> None:
+def write_calendars(notices: Sequence[Notice], output_dir: Path) -> None:
     variants = [
         ("holiday-and-compensate", "zh-CN", True, True),
         ("holidays-only", "zh-CN", True, False),
@@ -381,43 +417,50 @@ def write_calendars(notice: Notice, output_dir: Path) -> None:
         language_dir = output_dir / language
         language_dir.mkdir(parents=True, exist_ok=True)
         path = language_dir / f"{slug}.ics"
-        events = build_events(notice, language, include_holidays, include_workdays)
-        calendar_name = build_calendar_name(notice.holiday_year, language, slug)
+        events = build_events(notices, language, include_holidays, include_workdays)
+        calendar_name = build_calendar_name(notices, language, slug)
         write_ics_file(path, calendar_name, events)
 
 
 def build_events(
-    notice: Notice,
+    notices: Sequence[Notice],
     language: str,
     include_holidays: bool,
     include_workdays: bool,
 ) -> list[CalendarEvent]:
     events: list[CalendarEvent] = []
 
-    for line in notice.lines:
-        if include_holidays:
-            for start, end in merge_consecutive_dates(line.holiday_dates):
-                events.append(
-                    CalendarEvent(
-                        start=start,
-                        end=end,
-                        summary=build_summary(line, language, "holiday"),
-                        description=build_description(notice, line, language, "holiday"),
-                        uid_seed=f"{language}:holiday:{line.holiday_name_zh}:{start.isoformat()}:{end.isoformat()}",
+    for notice in notices:
+        for line in notice.lines:
+            if include_holidays:
+                for start, end in merge_consecutive_dates(line.holiday_dates):
+                    events.append(
+                        CalendarEvent(
+                            start=start,
+                            end=end,
+                            summary=build_summary(line, language, "holiday"),
+                            description=build_description(notice, line, language, "holiday"),
+                            uid_seed=(
+                                f"{language}:holiday:{notice.holiday_year}:{line.holiday_name_zh}:"
+                                f"{start.isoformat()}:{end.isoformat()}"
+                            ),
+                        )
                     )
-                )
 
-        if include_workdays:
-            for start, end in merge_consecutive_dates(line.workday_dates):
-                events.append(
-                    CalendarEvent(
-                        start=start,
-                        end=end,
-                        summary=build_summary(line, language, "workday"),
-                        description=build_description(notice, line, language, "workday"),
-                        uid_seed=f"{language}:workday:{line.holiday_name_zh}:{start.isoformat()}:{end.isoformat()}",
+            if include_workdays:
+                for start, end in merge_consecutive_dates(line.workday_dates):
+                    events.append(
+                        CalendarEvent(
+                            start=start,
+                            end=end,
+                            summary=build_summary(line, language, "workday"),
+                            description=build_description(notice, line, language, "workday"),
+                            uid_seed=(
+                                f"{language}:workday:{notice.holiday_year}:{line.holiday_name_zh}:"
+                                f"{start.isoformat()}:{end.isoformat()}"
+                            ),
+                        )
                     )
-                )
 
     return sorted(events, key=lambda event: (event.start, event.end, event.summary))
 
@@ -455,16 +498,20 @@ def build_description(notice: Notice, line: NoticeLine, language: str, event_typ
     return "\n".join(description_lines)
 
 
-def build_calendar_name(holiday_year: int, language: str, slug: str) -> str:
+def build_calendar_name(notices: Sequence[Notice], language: str, slug: str) -> str:
+    first_year = min(notice.holiday_year for notice in notices)
+    last_year = max(notice.holiday_year for notice in notices)
+    year_label = str(first_year) if first_year == last_year else f"{first_year}-{last_year}"
+
     zh_names = {
-        "holiday-and-compensate": f"中国法定节假日与调休上班 {holiday_year}",
-        "holidays-only": f"中国法定节假日 {holiday_year}",
-        "compensate-working-days-only": f"中国调休上班 {holiday_year}",
+        "holiday-and-compensate": f"中国法定节假日与调休上班 {year_label}",
+        "holidays-only": f"中国法定节假日 {year_label}",
+        "compensate-working-days-only": f"中国调休上班 {year_label}",
     }
     en_names = {
-        "holiday-and-compensate": f"China Holidays and Compensated Working Days {holiday_year}",
-        "holidays-only": f"China Holidays {holiday_year}",
-        "compensate-working-days-only": f"China Compensated Working Days {holiday_year}",
+        "holiday-and-compensate": f"China Holidays and Compensated Working Days {year_label}",
+        "holidays-only": f"China Holidays {year_label}",
+        "compensate-working-days-only": f"China Compensated Working Days {year_label}",
     }
     return zh_names[slug] if language == "zh-CN" else en_names[slug]
 
@@ -501,24 +548,35 @@ def write_ics_file(path: Path, calendar_name: str, events: Sequence[CalendarEven
     path.write_text(content, encoding="utf-8")
 
 
-def write_metadata(notice: Notice, output_dir: Path) -> None:
+def write_metadata(notices: Sequence[Notice], output_dir: Path) -> None:
+    first_year = min(notice.holiday_year for notice in notices)
+    last_year = max(notice.holiday_year for notice in notices)
     metadata = {
-        "holiday_year": notice.holiday_year,
-        "title_zh": notice.title_zh,
-        "title_en": notice.title_en,
-        "source_url": notice.source_url,
-        "published_at": notice.published_at.isoformat(),
+        "year_window": {
+            "start": first_year,
+            "end": last_year,
+        },
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "holiday_lines": [
+        "notices": [
             {
-                "holiday_name_zh": line.holiday_name_zh,
-                "holiday_name_en": line.holiday_name_en,
-                "line_zh": line.line_zh,
-                "line_en": line.line_en,
-                "holiday_dates": [value.isoformat() for value in line.holiday_dates],
-                "workday_dates": [value.isoformat() for value in line.workday_dates],
+                "holiday_year": notice.holiday_year,
+                "title_zh": notice.title_zh,
+                "title_en": notice.title_en,
+                "source_url": notice.source_url,
+                "published_at": notice.published_at.isoformat(),
+                "holiday_lines": [
+                    {
+                        "holiday_name_zh": line.holiday_name_zh,
+                        "holiday_name_en": line.holiday_name_en,
+                        "line_zh": line.line_zh,
+                        "line_en": line.line_en,
+                        "holiday_dates": [value.isoformat() for value in line.holiday_dates],
+                        "workday_dates": [value.isoformat() for value in line.workday_dates],
+                    }
+                    for line in notice.lines
+                ],
             }
-            for line in notice.lines
+            for notice in notices
         ],
     }
     metadata_path = output_dir / "metadata.json"
