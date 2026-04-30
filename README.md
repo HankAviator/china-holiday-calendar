@@ -30,7 +30,7 @@ Each calendar:
 - uses the official holiday arrangement notices published by the State Council,
 - merges consecutive dates into a single all-day event,
 - includes the relevant announcement line in each event description,
-- is regenerated every 12 hours by GitHub Actions.
+- is checked and regenerated every 10 minutes by GitHub Actions when new notice data appears.
 
 ## Local usage
 
