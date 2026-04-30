@@ -24,18 +24,46 @@ NOTICE_TITLE_TEMPLATE_ZH = "国务院办公厅关于{year}年部分节假日安�
 NOTICE_TITLE_TEMPLATE_EN = (
     "General Office of the State Council Notice on the {year} Public Holiday Arrangements"
 )
+NOTICE_TITLE_TEMPLATE_RU = (
+    "Уведомление Канцелярии Госсовета КНР о графике части праздничных дней на {year} год"
+)
 KNOWN_NOTICE_URLS = {
     2025: "https://www.gov.cn/zhengce/zhengceku/202411/content_6986383.htm",
     2026: "https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm",
 }
 HOLIDAY_NAME_TRANSLATIONS = {
-    "元旦": "New Year's Day",
-    "春节": "Spring Festival",
-    "清明节": "Qingming Festival",
-    "劳动节": "Labour Day",
-    "端午节": "Dragon Boat Festival",
-    "中秋节": "Mid-Autumn Festival",
-    "国庆节": "National Day",
+    "en": {
+        "元旦": "New Year's Day",
+        "春节": "Spring Festival",
+        "清明节": "Qingming Festival",
+        "劳动节": "Labour Day",
+        "端午节": "Dragon Boat Festival",
+        "中秋节": "Mid-Autumn Festival",
+        "国庆节": "National Day",
+    },
+    "ru": {
+        "元旦": "Новый год",
+        "春节": "Праздник весны",
+        "清明节": "Праздник Цинмин",
+        "劳动节": "Праздник труда",
+        "端午节": "Праздник драконьих лодок",
+        "中秋节": "Праздник середины осени",
+        "国庆节": "Национальный праздник",
+    },
+}
+MONTH_NAMES_RU = {
+    1: "января",
+    2: "февраля",
+    3: "марта",
+    4: "апреля",
+    5: "мая",
+    6: "июня",
+    7: "июля",
+    8: "августа",
+    9: "сентября",
+    10: "октября",
+    11: "ноября",
+    12: "декабря",
 }
 DATE_RE = re.compile(
     r"(?:(?P<year>\d{4})年)?(?:(?P<month>\d{1,2})月)?(?P<day>\d{1,2})日"
@@ -400,7 +428,21 @@ def describe_merged_ranges_en(ranges: Sequence[tuple[date, date]]) -> str:
 
 def translate_holiday_name(holiday_name_zh: str) -> str:
     pieces = re.split(r"[、，,/]", holiday_name_zh)
-    translated = [HOLIDAY_NAME_TRANSLATIONS.get(piece.strip(), piece.strip()) for piece in pieces if piece.strip()]
+    translated = [
+        HOLIDAY_NAME_TRANSLATIONS["en"].get(piece.strip(), piece.strip())
+        for piece in pieces
+        if piece.strip()
+    ]
+    return " / ".join(translated)
+
+
+def translate_holiday_name_ru(holiday_name_zh: str) -> str:
+    pieces = re.split(r"[、，,/]", holiday_name_zh)
+    translated = [
+        HOLIDAY_NAME_TRANSLATIONS["ru"].get(piece.strip(), piece.strip())
+        for piece in pieces
+        if piece.strip()
+    ]
     return " / ".join(translated)
 
 
@@ -412,6 +454,9 @@ def write_calendars(notices: Sequence[Notice], output_dir: Path) -> None:
         ("holiday-and-compensate", "en", True, True),
         ("holidays-only", "en", True, False),
         ("compensate-working-days-only", "en", False, True),
+        ("holiday-and-compensate", "ru", True, True),
+        ("holidays-only", "ru", True, False),
+        ("compensate-working-days-only", "ru", False, True),
     ]
     for slug, language, include_holidays, include_workdays in variants:
         language_dir = output_dir / language
@@ -471,6 +516,12 @@ def build_summary(line: NoticeLine, language: str, event_type: str) -> str:
             return line.holiday_name_zh
         return f"{line.holiday_name_zh} 调休上班"
 
+    if language == "ru":
+        holiday_name_ru = translate_holiday_name_ru(line.holiday_name_zh)
+        if event_type == "holiday":
+            return holiday_name_ru
+        return f"{holiday_name_ru} Компенсационный рабочий день"
+
     if event_type == "holiday":
         return line.holiday_name_en
     return f"{line.holiday_name_en} Compensated Working Day"
@@ -484,6 +535,17 @@ def build_description(notice: Notice, line: NoticeLine, language: str, event_typ
             f"相关原文：{line.line_zh}",
             f"来源：{notice.source_url}",
             f"发布日期：{notice.published_at.isoformat()}",
+        ]
+        return "\n".join(description_lines)
+
+    if language == "ru":
+        description_lines = [
+            f"Тип: {'Праздничный день' if event_type == 'holiday' else 'Компенсационный рабочий день'}",
+            f"Источник: {NOTICE_TITLE_TEMPLATE_RU.format(year=notice.holiday_year)}",
+            f"Соответствующая строка уведомления: {build_russian_line(line)}",
+            f"Оригинальная китайская строка: {line.line_zh}",
+            f"URL источника: {notice.source_url}",
+            f"Дата публикации: {notice.published_at.isoformat()}",
         ]
         return "\n".join(description_lines)
 
@@ -513,7 +575,16 @@ def build_calendar_name(notices: Sequence[Notice], language: str, slug: str) -> 
         "holidays-only": f"China Holidays {year_label}",
         "compensate-working-days-only": f"China Compensated Working Days {year_label}",
     }
-    return zh_names[slug] if language == "zh-CN" else en_names[slug]
+    ru_names = {
+        "holiday-and-compensate": f"Праздничные и компенсационные рабочие дни Китая {year_label}",
+        "holidays-only": f"Праздничные дни Китая {year_label}",
+        "compensate-working-days-only": f"Компенсационные рабочие дни Китая {year_label}",
+    }
+    if language == "zh-CN":
+        return zh_names[slug]
+    if language == "ru":
+        return ru_names[slug]
+    return en_names[slug]
 
 
 def write_ics_file(path: Path, calendar_name: str, events: Sequence[CalendarEvent]) -> None:
@@ -634,10 +705,46 @@ def format_date_en(value: date) -> str:
     return f"{value.strftime('%b')} {value.day}, {value.year}"
 
 
+def format_date_ru(value: date) -> str:
+    return f"{value.day} {MONTH_NAMES_RU[value.month]} {value.year} г."
+
+
 def format_date_span_en(start: date, end: date) -> str:
     if start == end:
         return format_date_en(start)
     return f"{format_date_en(start)} to {format_date_en(end)}"
+
+
+def format_date_span_ru(start: date, end: date) -> str:
+    if start == end:
+        return format_date_ru(start)
+    return f"с {format_date_ru(start)} по {format_date_ru(end)}"
+
+
+def describe_merged_ranges_ru(ranges: Sequence[tuple[date, date]]) -> str:
+    if not ranges:
+        return ""
+    pieces = [format_date_span_ru(start, end) for start, end in ranges]
+    if len(pieces) == 1:
+        return pieces[0]
+    return ", ".join(pieces[:-1]) + f" и {pieces[-1]}"
+
+
+def build_russian_line(line: NoticeLine) -> str:
+    holiday_name_ru = translate_holiday_name_ru(line.holiday_name_zh)
+    holiday_ranges = merge_consecutive_dates(line.holiday_dates)
+    if len(holiday_ranges) == 1 and holiday_ranges[0][0] == holiday_ranges[0][1]:
+        holiday_part = f"{holiday_name_ru}: выходной день {format_date_ru(holiday_ranges[0][0])}."
+    else:
+        holiday_part = f"{holiday_name_ru}: выходные {describe_merged_ranges_ru(holiday_ranges)}."
+
+    if not line.workday_dates:
+        return holiday_part
+
+    workday_part = (
+        f" Компенсационные рабочие дни: {describe_merged_ranges_ru(merge_consecutive_dates(line.workday_dates))}."
+    )
+    return holiday_part + workday_part
 
 
 def escape_ics_text(value: str) -> str:

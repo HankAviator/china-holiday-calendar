@@ -1,6 +1,6 @@
 # China Holiday Calendar
 
-This repository scrapes the official State Council holiday notices for a rolling three-year window and publishes six ICS calendars:
+This repository scrapes the official State Council holiday notices for a rolling three-year window and publishes nine ICS calendars:
 
 - `calendars/zh-CN/holiday-and-compensate.ics`
 - `calendars/zh-CN/holidays-only.ics`
@@ -8,6 +8,9 @@ This repository scrapes the official State Council holiday notices for a rolling
 - `calendars/en/holiday-and-compensate.ics`
 - `calendars/en/holidays-only.ics`
 - `calendars/en/compensate-working-days-only.ics`
+- `calendars/ru/holiday-and-compensate.ics`
+- `calendars/ru/holidays-only.ics`
+- `calendars/ru/compensate-working-days-only.ics`
 
 Each calendar:
 
