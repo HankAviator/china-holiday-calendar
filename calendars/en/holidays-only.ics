@@ -1,0 +1,112 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//china-holiday-calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:China Holidays 2026
+BEGIN:VEVENT
+UID:460359017453e3826dc4b70e@china-holiday-calendar
+DTSTAMP:20260430T103928Z
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260104
+SUMMARY:New Year's Day
+DESCRIPTION:Type: Holiday\nSource notice: General Office of the State Cou
+ ncil Notice on the 2026 Public Holiday Arrangements\nRelevant announcemen
+ t line: New Year's Day: holiday from Jan 1\, 2026 to Jan 3\, 2026. Compen
+ sated working day(s): Jan 4\, 2026.\nOriginal Chinese line: 一、元旦
+ ： 1月1日（周四）至3日（周六）放假调休，共3天。1月4
+ 日（周日）上班。\nSource URL: https://www.gov.cn/zhengce/zhengcek
+ u/202511/content_7047091.htm\nPublished: 2025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:a8175d1bf4f6d68488441a01@china-holiday-calendar
+DTSTAMP:20260430T103928Z
+DTSTART;VALUE=DATE:20260215
+DTEND;VALUE=DATE:20260224
+SUMMARY:Spring Festival
+DESCRIPTION:Type: Holiday\nSource notice: General Office of the State Cou
+ ncil Notice on the 2026 Public Holiday Arrangements\nRelevant announcemen
+ t line: Spring Festival: holiday from Feb 15\, 2026 to Feb 23\, 2026. Com
+ pensated working day(s): Feb 14\, 2026\, and Feb 28\, 2026.\nOriginal Chi
+ nese line: 二、春节： 2月15日（农历腊月二十八、周日）
+ 至23日（农历正月初七、周一）放假调休，共9天。2月14
+ 日（周六）、2月28日（周六）上班。\nSource URL: https://www
+ .gov.cn/zhengce/zhengceku/202511/content_7047091.htm\nPublished: 2025-11-
+ 04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:e8a2571a70f2cfc019cf8d74@china-holiday-calendar
+DTSTAMP:20260430T103928Z
+DTSTART;VALUE=DATE:20260404
+DTEND;VALUE=DATE:20260407
+SUMMARY:Qingming Festival
+DESCRIPTION:Type: Holiday\nSource notice: General Office of the State Cou
+ ncil Notice on the 2026 Public Holiday Arrangements\nRelevant announcemen
+ t line: Qingming Festival: holiday from Apr 4\, 2026 to Apr 6\, 2026.\nOr
+ iginal Chinese line: 三、清明节： 4月4日（周六）至6日（周
+ 一）放假，共3天。\nSource URL: https://www.gov.cn/zhengce/zhengce
+ ku/202511/content_7047091.htm\nPublished: 2025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:f152323c9081774e318434c8@china-holiday-calendar
+DTSTAMP:20260430T103928Z
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260506
+SUMMARY:Labour Day
+DESCRIPTION:Type: Holiday\nSource notice: General Office of the State Cou
+ ncil Notice on the 2026 Public Holiday Arrangements\nRelevant announcemen
+ t line: Labour Day: holiday from May 1\, 2026 to May 5\, 2026. Compensate
+ d working day(s): May 9\, 2026.\nOriginal Chinese line: 四、劳动节
+ ： 5月1日（周五）至5日（周二）放假调休，共5天。5月9
+ 日（周六）上班。\nSource URL: https://www.gov.cn/zhengce/zhengcek
+ u/202511/content_7047091.htm\nPublished: 2025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:c7164a31fb453090d18b5e3c@china-holiday-calendar
+DTSTAMP:20260430T103928Z
+DTSTART;VALUE=DATE:20260619
+DTEND;VALUE=DATE:20260622
+SUMMARY:Dragon Boat Festival
+DESCRIPTION:Type: Holiday\nSource notice: General Office of the State Cou
+ ncil Notice on the 2026 Public Holiday Arrangements\nRelevant announcemen
+ t line: Dragon Boat Festival: holiday from Jun 19\, 2026 to Jun 21\, 2026
+ .\nOriginal Chinese line: 五、端午节： 6月19日（周五）至21
+ 日（周日）放假，共3天。\nSource URL: https://www.gov.cn/zhengc
+ e/zhengceku/202511/content_7047091.htm\nPublished: 2025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:a7716a7058c13488b63cafe5@china-holiday-calendar
+DTSTAMP:20260430T103928Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260928
+SUMMARY:Mid-Autumn Festival
+DESCRIPTION:Type: Holiday\nSource notice: General Office of the State Cou
+ ncil Notice on the 2026 Public Holiday Arrangements\nRelevant announcemen
+ t line: Mid-Autumn Festival: holiday from Sep 25\, 2026 to Sep 27\, 2026.
+ \nOriginal Chinese line: 六、中秋节： 9月25日（周五）至27日
+ （周日）放假，共3天。\nSource URL: https://www.gov.cn/zhengce/z
+ hengceku/202511/content_7047091.htm\nPublished: 2025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:7430c2be43c0965d00a51804@china-holiday-calendar
+DTSTAMP:20260430T103928Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261008
+SUMMARY:National Day
+DESCRIPTION:Type: Holiday\nSource notice: General Office of the State Cou
+ ncil Notice on the 2026 Public Holiday Arrangements\nRelevant announcemen
+ t line: National Day: holiday from Oct 1\, 2026 to Oct 7\, 2026. Compensa
+ ted working day(s): Sep 20\, 2026\, and Oct 10\, 2026.\nOriginal Chinese 
+ line: 七、国庆节： 10月1日（周四）至7日（周三）放假
+ 调休，共7天。9月20日（周日）、10月10日（周六）上班
+ 。\nSource URL: https://www.gov.cn/zhengce/zhengceku/202511/content_7047
+ 091.htm\nPublished: 2025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

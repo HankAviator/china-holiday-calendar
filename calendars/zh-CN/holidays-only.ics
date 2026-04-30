@@ -1,0 +1,99 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//china-holiday-calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:中国法定节假日 2026
+BEGIN:VEVENT
+UID:d6681c7afd5d04767cb90da6@china-holiday-calendar
+DTSTAMP:20260430T103928Z
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260104
+SUMMARY:元旦
+DESCRIPTION:类型：节假日\n依据：国务院办公厅关于2026年
+ 部分节假日安排的通知\n相关原文：一、元旦： 1月1日
+ （周四）至3日（周六）放假调休，共3天。1月4日（周日
+ ）上班。\n来源：https://www.gov.cn/zhengce/zhengceku/202511/conten
+ t_7047091.htm\n发布日期：2025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:bd839b00faa58bc580dc664e@china-holiday-calendar
+DTSTAMP:20260430T103928Z
+DTSTART;VALUE=DATE:20260215
+DTEND;VALUE=DATE:20260224
+SUMMARY:春节
+DESCRIPTION:类型：节假日\n依据：国务院办公厅关于2026年
+ 部分节假日安排的通知\n相关原文：二、春节： 2月15日
+ （农历腊月二十八、周日）至23日（农历正月初七、周
+ 一）放假调休，共9天。2月14日（周六）、2月28日（周六
+ ）上班。\n来源：https://www.gov.cn/zhengce/zhengceku/202511/conten
+ t_7047091.htm\n发布日期：2025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:852111d36f235bff49243cab@china-holiday-calendar
+DTSTAMP:20260430T103928Z
+DTSTART;VALUE=DATE:20260404
+DTEND;VALUE=DATE:20260407
+SUMMARY:清明节
+DESCRIPTION:类型：节假日\n依据：国务院办公厅关于2026年
+ 部分节假日安排的通知\n相关原文：三、清明节： 4月4
+ 日（周六）至6日（周一）放假，共3天。\n来源：https://w
+ ww.gov.cn/zhengce/zhengceku/202511/content_7047091.htm\n发布日期：20
+ 25-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:4efa898c205d035e083bc8f9@china-holiday-calendar
+DTSTAMP:20260430T103928Z
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260506
+SUMMARY:劳动节
+DESCRIPTION:类型：节假日\n依据：国务院办公厅关于2026年
+ 部分节假日安排的通知\n相关原文：四、劳动节： 5月1
+ 日（周五）至5日（周二）放假调休，共5天。5月9日（周
+ 六）上班。\n来源：https://www.gov.cn/zhengce/zhengceku/202511/con
+ tent_7047091.htm\n发布日期：2025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:0dfdfb3c2c73011565fd712c@china-holiday-calendar
+DTSTAMP:20260430T103928Z
+DTSTART;VALUE=DATE:20260619
+DTEND;VALUE=DATE:20260622
+SUMMARY:端午节
+DESCRIPTION:类型：节假日\n依据：国务院办公厅关于2026年
+ 部分节假日安排的通知\n相关原文：五、端午节： 6月19
+ 日（周五）至21日（周日）放假，共3天。\n来源：https://
+ www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm\n发布日期：2
+ 025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2a1378b7f022c186cbbacc9a@china-holiday-calendar
+DTSTAMP:20260430T103928Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260928
+SUMMARY:中秋节
+DESCRIPTION:类型：节假日\n依据：国务院办公厅关于2026年
+ 部分节假日安排的通知\n相关原文：六、中秋节： 9月25
+ 日（周五）至27日（周日）放假，共3天。\n来源：https://
+ www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm\n发布日期：2
+ 025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:7eb0569550cf5e47321dee61@china-holiday-calendar
+DTSTAMP:20260430T103928Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261008
+SUMMARY:国庆节
+DESCRIPTION:类型：节假日\n依据：国务院办公厅关于2026年
+ 部分节假日安排的通知\n相关原文：七、国庆节： 10月1
+ 日（周四）至7日（周三）放假调休，共7天。9月20日（
+ 周日）、10月10日（周六）上班。\n来源：https://www.gov.cn/
+ zhengce/zhengceku/202511/content_7047091.htm\n发布日期：2025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
