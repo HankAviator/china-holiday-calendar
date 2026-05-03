@@ -26,11 +26,11 @@ Use the raw GitHub URLs above in any calendar app that supports subscribing to a
 
 Each calendar:
 
-- includes notices for execution year - 1 through execution year + 1 when already published,
+- includes notices for `execution year - 1` through `execution year + 1` when already published,
 - uses the official holiday arrangement notices published by the State Council,
 - merges consecutive dates into a single all-day event,
 - includes the relevant announcement line in each event description,
-- is checked and regenerated every 10 minutes by GitHub Actions when new notice data appears.
+- is checked and regenerated every 5 minutes by GitHub Actions when new notice data appears.
 
 ## Local usage
 
