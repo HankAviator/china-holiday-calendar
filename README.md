@@ -32,6 +32,8 @@ Each calendar:
 - includes the relevant announcement line in each event description,
 - is checked and regenerated every 5 minutes by GitHub Actions when new notice data appears.
 
+The scheduled workflow runs inside a prebuilt GitHub Container Registry image with Python, Playwright, and Chromium already installed, so recurring runs do not spend time reinstalling dependencies.
+
 ## Local usage
 
 ```bash
@@ -53,3 +55,7 @@ PYTHONPATH=src python -m china_holiday_calendar --output-dir calendars
 `--year` is the anchor year. For example, `--year 2026` tries to include 2025, 2026, and 2027 if their official notices are available.
 
 The generator writes metadata to `calendars/metadata.json`.
+
+## Automation image
+
+GitHub Actions uses `ghcr.io/hankaviator/china-holiday-calendar-runner:latest` for scheduled runs. Rebuild it by running the `Build Calendar Runner Image` workflow, or let it refresh automatically when `requirements.txt` or `.github/docker/calendar-runner/Dockerfile` changes on `master`.
