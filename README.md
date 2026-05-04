@@ -85,45 +85,6 @@ PYTHONPATH=src python -m china_holiday_calendar --output-dir calendars --data-ou
 
 `--year` is the anchor year. For example, `--year 2026` tries to include 2025, 2026, and 2027 if their official notices are available.
 
-Default output structure:
-
-```text
-calendars/
-  zh-CN/
-    holiday-and-compensate.ics
-    holidays-only.ics
-    compensate-working-days-only.ics
-  en/
-    holiday-and-compensate.ics
-    holidays-only.ics
-    compensate-working-days-only.ics
-  ru/
-    holiday-and-compensate.ics
-    holidays-only.ics
-    compensate-working-days-only.ics
-  metadata.json
-data/
-  latest.json
-  years/
-    2025.json
-    2026.json
-  zh-CN/
-    latest.json
-    years/
-      2025.json
-      2026.json
-  en/
-    latest.json
-    years/
-      2025.json
-      2026.json
-  ru/
-    latest.json
-    years/
-      2025.json
-      2026.json
-```
-
 ## Automation image
 
 Scheduled updates use `ghcr.io/hankaviator/china-holiday-calendar-runner:latest`. Rebuild it by running the `Build Calendar Runner Image` workflow, or let it refresh automatically when `requirements.txt`, `.github/docker/calendar-runner/Dockerfile`, or the image workflow changes on `master`.
