@@ -5,6 +5,10 @@ on:
   schedule:
     - cron: '2-59/5 * * * *'
 
+concurrency:
+  group: update-calendars-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
   packages: read
@@ -12,6 +16,7 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     container:
       image: ghcr.io/hankaviator/china-holiday-calendar-runner:latest
       credentials:
@@ -25,23 +30,23 @@ jobs:
       - name: Generate calendars
         run: PYTHONPATH=src python -m china_holiday_calendar
 
-      - name: Commit updated calendars
+      - name: Commit updated feeds
         run: |
-          if [ -z "$(git status --porcelain calendars)" ]; then
-            echo "No calendar changes detected."
+          if [ -z "$(git status --porcelain calendars data)" ]; then
+            echo "No generated feed changes detected."
             exit 0
           fi
 
           if git diff --quiet \
             --ignore-matching-lines='^DTSTAMP:' \
             --ignore-matching-lines='^  "generated_at": ' \
-            -- calendars; then
+            -- calendars data; then
             echo "No new holiday information announced."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add calendars
+          git add calendars data
           git commit -m "Update China holiday calendars"
           git push
