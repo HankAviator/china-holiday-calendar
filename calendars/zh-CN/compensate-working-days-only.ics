@@ -1,158 +1,158 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//china-holiday-calendar//EN
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:中国调休上班 2025-2026
-BEGIN:VEVENT
-UID:40d5ff3c769510a74d5ca463@china-holiday-calendar
-DTSTAMP:20260430T123152Z
-DTSTART;VALUE=DATE:20250126
-DTEND;VALUE=DATE:20250127
-SUMMARY:春节 调休上班
-DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2025
- 年部分节假日安排的通知\n相关原文：二、春节： 1月28
- 日（农历除夕、周二）至2月4日（农历正月初七、周二
- ）放假调休，共8天。1月26日（周日）、2月8日（周六）
- 上班。\n来源：https://www.gov.cn/zhengce/zhengceku/202411/content_6
- 986383.htm\n发布日期：2024-11-12
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:77bc179980ddcc97da5453ed@china-holiday-calendar
-DTSTAMP:20260430T123152Z
-DTSTART;VALUE=DATE:20250208
-DTEND;VALUE=DATE:20250209
-SUMMARY:春节 调休上班
-DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2025
- 年部分节假日安排的通知\n相关原文：二、春节： 1月28
- 日（农历除夕、周二）至2月4日（农历正月初七、周二
- ）放假调休，共8天。1月26日（周日）、2月8日（周六）
- 上班。\n来源：https://www.gov.cn/zhengce/zhengceku/202411/content_6
- 986383.htm\n发布日期：2024-11-12
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:3ff029b00fd53192ba78e32d@china-holiday-calendar
-DTSTAMP:20260430T123152Z
-DTSTART;VALUE=DATE:20250427
-DTEND;VALUE=DATE:20250428
-SUMMARY:劳动节 调休上班
-DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2025
- 年部分节假日安排的通知\n相关原文：四、劳动节： 5月
- 1日（周四）至5日（周一）放假调休，共5天。4月27日（
- 周日）上班。\n来源：https://www.gov.cn/zhengce/zhengceku/202411/
- content_6986383.htm\n发布日期：2024-11-12
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:698b751b91b4e957d712b22f@china-holiday-calendar
-DTSTAMP:20260430T123152Z
-DTSTART;VALUE=DATE:20250928
-DTEND;VALUE=DATE:20250929
-SUMMARY:国庆节、中秋节 调休上班
-DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2025
- 年部分节假日安排的通知\n相关原文：六、国庆节、中
- 秋节： 10月1日（周三）至8日（周三）放假调休，共8天
- 。9月28日（周日）、10月11日（周六）上班。\n来源：http
- s://www.gov.cn/zhengce/zhengceku/202411/content_6986383.htm\n发布日期
- ：2024-11-12
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:d0e528021eb6d2a424c9aaae@china-holiday-calendar
-DTSTAMP:20260430T123152Z
-DTSTART;VALUE=DATE:20251011
-DTEND;VALUE=DATE:20251012
-SUMMARY:国庆节、中秋节 调休上班
-DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2025
- 年部分节假日安排的通知\n相关原文：六、国庆节、中
- 秋节： 10月1日（周三）至8日（周三）放假调休，共8天
- 。9月28日（周日）、10月11日（周六）上班。\n来源：http
- s://www.gov.cn/zhengce/zhengceku/202411/content_6986383.htm\n发布日期
- ：2024-11-12
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:3c60811ceb567cc36dea1d13@china-holiday-calendar
-DTSTAMP:20260430T123152Z
-DTSTART;VALUE=DATE:20260104
-DTEND;VALUE=DATE:20260105
-SUMMARY:元旦 调休上班
-DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2026
- 年部分节假日安排的通知\n相关原文：一、元旦： 1月1
- 日（周四）至3日（周六）放假调休，共3天。1月4日（周
- 日）上班。\n来源：https://www.gov.cn/zhengce/zhengceku/202511/con
- tent_7047091.htm\n发布日期：2025-11-04
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:e847d4022a0f2fe3c22904c4@china-holiday-calendar
-DTSTAMP:20260430T123152Z
-DTSTART;VALUE=DATE:20260214
-DTEND;VALUE=DATE:20260215
-SUMMARY:春节 调休上班
-DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2026
- 年部分节假日安排的通知\n相关原文：二、春节： 2月15
- 日（农历腊月二十八、周日）至23日（农历正月初七、
- 周一）放假调休，共9天。2月14日（周六）、2月28日（周
- 六）上班。\n来源：https://www.gov.cn/zhengce/zhengceku/202511/con
- tent_7047091.htm\n发布日期：2025-11-04
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:060d4ff1b44b985ec1cc88a6@china-holiday-calendar
-DTSTAMP:20260430T123152Z
-DTSTART;VALUE=DATE:20260228
-DTEND;VALUE=DATE:20260301
-SUMMARY:春节 调休上班
-DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2026
- 年部分节假日安排的通知\n相关原文：二、春节： 2月15
- 日（农历腊月二十八、周日）至23日（农历正月初七、
- 周一）放假调休，共9天。2月14日（周六）、2月28日（周
- 六）上班。\n来源：https://www.gov.cn/zhengce/zhengceku/202511/con
- tent_7047091.htm\n发布日期：2025-11-04
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:e3dd4758a33b9814ff87eb62@china-holiday-calendar
-DTSTAMP:20260430T123152Z
-DTSTART;VALUE=DATE:20260509
-DTEND;VALUE=DATE:20260510
-SUMMARY:劳动节 调休上班
-DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2026
- 年部分节假日安排的通知\n相关原文：四、劳动节： 5月
- 1日（周五）至5日（周二）放假调休，共5天。5月9日（
- 周六）上班。\n来源：https://www.gov.cn/zhengce/zhengceku/202511/
- content_7047091.htm\n发布日期：2025-11-04
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:08543a079b1fbe9bde17a76e@china-holiday-calendar
-DTSTAMP:20260430T123152Z
-DTSTART;VALUE=DATE:20260920
-DTEND;VALUE=DATE:20260921
-SUMMARY:国庆节 调休上班
-DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2026
- 年部分节假日安排的通知\n相关原文：七、国庆节： 10
- 月1日（周四）至7日（周三）放假调休，共7天。9月20日
- （周日）、10月10日（周六）上班。\n来源：https://www.gov.
- cn/zhengce/zhengceku/202511/content_7047091.htm\n发布日期：2025-11-0
- 4
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:7f982e4a54f20f7d0a1b3c6d@china-holiday-calendar
-DTSTAMP:20260430T123152Z
-DTSTART;VALUE=DATE:20261010
-DTEND;VALUE=DATE:20261011
-SUMMARY:国庆节 调休上班
-DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2026
- 年部分节假日安排的通知\n相关原文：七、国庆节： 10
- 月1日（周四）至7日（周三）放假调休，共7天。9月20日
- （周日）、10月10日（周六）上班。\n来源：https://www.gov.
- cn/zhengce/zhengceku/202511/content_7047091.htm\n发布日期：2025-11-0
- 4
-TRANSP:TRANSPARENT
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//china-holiday-calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:中国调休上班 2025-2026
+BEGIN:VEVENT
+UID:40d5ff3c769510a74d5ca463@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20250126
+DTEND;VALUE=DATE:20250127
+SUMMARY:春节 调休上班
+DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2025
+ 年部分节假日安排的通知\n相关原文：二、春节： 1月28
+ 日（农历除夕、周二）至2月4日（农历正月初七、周二
+ ）放假调休，共8天。1月26日（周日）、2月8日（周六）
+ 上班。\n来源：https://www.gov.cn/zhengce/zhengceku/202411/content_6
+ 986383.htm\n发布日期：2024-11-12
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:77bc179980ddcc97da5453ed@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20250208
+DTEND;VALUE=DATE:20250209
+SUMMARY:春节 调休上班
+DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2025
+ 年部分节假日安排的通知\n相关原文：二、春节： 1月28
+ 日（农历除夕、周二）至2月4日（农历正月初七、周二
+ ）放假调休，共8天。1月26日（周日）、2月8日（周六）
+ 上班。\n来源：https://www.gov.cn/zhengce/zhengceku/202411/content_6
+ 986383.htm\n发布日期：2024-11-12
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:3ff029b00fd53192ba78e32d@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20250427
+DTEND;VALUE=DATE:20250428
+SUMMARY:劳动节 调休上班
+DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2025
+ 年部分节假日安排的通知\n相关原文：四、劳动节： 5月
+ 1日（周四）至5日（周一）放假调休，共5天。4月27日（
+ 周日）上班。\n来源：https://www.gov.cn/zhengce/zhengceku/202411/
+ content_6986383.htm\n发布日期：2024-11-12
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:698b751b91b4e957d712b22f@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20250928
+DTEND;VALUE=DATE:20250929
+SUMMARY:国庆节、中秋节 调休上班
+DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2025
+ 年部分节假日安排的通知\n相关原文：六、国庆节、中
+ 秋节： 10月1日（周三）至8日（周三）放假调休，共8天
+ 。9月28日（周日）、10月11日（周六）上班。\n来源：http
+ s://www.gov.cn/zhengce/zhengceku/202411/content_6986383.htm\n发布日期
+ ：2024-11-12
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:d0e528021eb6d2a424c9aaae@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20251011
+DTEND;VALUE=DATE:20251012
+SUMMARY:国庆节、中秋节 调休上班
+DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2025
+ 年部分节假日安排的通知\n相关原文：六、国庆节、中
+ 秋节： 10月1日（周三）至8日（周三）放假调休，共8天
+ 。9月28日（周日）、10月11日（周六）上班。\n来源：http
+ s://www.gov.cn/zhengce/zhengceku/202411/content_6986383.htm\n发布日期
+ ：2024-11-12
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:3c60811ceb567cc36dea1d13@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20260104
+DTEND;VALUE=DATE:20260105
+SUMMARY:元旦 调休上班
+DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2026
+ 年部分节假日安排的通知\n相关原文：一、元旦： 1月1
+ 日（周四）至3日（周六）放假调休，共3天。1月4日（周
+ 日）上班。\n来源：https://www.gov.cn/zhengce/zhengceku/202511/con
+ tent_7047091.htm\n发布日期：2025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:e847d4022a0f2fe3c22904c4@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20260214
+DTEND;VALUE=DATE:20260215
+SUMMARY:春节 调休上班
+DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2026
+ 年部分节假日安排的通知\n相关原文：二、春节： 2月15
+ 日（农历腊月二十八、周日）至23日（农历正月初七、
+ 周一）放假调休，共9天。2月14日（周六）、2月28日（周
+ 六）上班。\n来源：https://www.gov.cn/zhengce/zhengceku/202511/con
+ tent_7047091.htm\n发布日期：2025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:060d4ff1b44b985ec1cc88a6@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20260228
+DTEND;VALUE=DATE:20260301
+SUMMARY:春节 调休上班
+DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2026
+ 年部分节假日安排的通知\n相关原文：二、春节： 2月15
+ 日（农历腊月二十八、周日）至23日（农历正月初七、
+ 周一）放假调休，共9天。2月14日（周六）、2月28日（周
+ 六）上班。\n来源：https://www.gov.cn/zhengce/zhengceku/202511/con
+ tent_7047091.htm\n发布日期：2025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:e3dd4758a33b9814ff87eb62@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20260509
+DTEND;VALUE=DATE:20260510
+SUMMARY:劳动节 调休上班
+DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2026
+ 年部分节假日安排的通知\n相关原文：四、劳动节： 5月
+ 1日（周五）至5日（周二）放假调休，共5天。5月9日（
+ 周六）上班。\n来源：https://www.gov.cn/zhengce/zhengceku/202511/
+ content_7047091.htm\n发布日期：2025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:08543a079b1fbe9bde17a76e@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20260920
+DTEND;VALUE=DATE:20260921
+SUMMARY:国庆节 调休上班
+DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2026
+ 年部分节假日安排的通知\n相关原文：七、国庆节： 10
+ 月1日（周四）至7日（周三）放假调休，共7天。9月20日
+ （周日）、10月10日（周六）上班。\n来源：https://www.gov.
+ cn/zhengce/zhengceku/202511/content_7047091.htm\n发布日期：2025-11-0
+ 4
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:7f982e4a54f20f7d0a1b3c6d@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261011
+SUMMARY:国庆节 调休上班
+DESCRIPTION:类型：调休上班\n依据：国务院办公厅关于2026
+ 年部分节假日安排的通知\n相关原文：七、国庆节： 10
+ 月1日（周四）至7日（周三）放假调休，共7天。9月20日
+ （周日）、10月10日（周六）上班。\n来源：https://www.gov.
+ cn/zhengce/zhengceku/202511/content_7047091.htm\n发布日期：2025-11-0
+ 4
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

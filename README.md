@@ -1,8 +1,15 @@
 # China Holiday Calendar
 
-This repository scrapes the official State Council holiday notices for a rolling three-year window and publishes nine ICS calendars that can be subscribed to directly:
+This repository scrapes the official State Council holiday notices for a rolling three-year window and publishes:
 
-## Subscribe
+- nine ICS calendars in `zh-CN`, `en`, and `ru`
+- a multilingual static JSON feed under `data/`
+- localized static JSON feeds under `data/zh-CN/`, `data/en/`, and `data/ru/`
+- source metadata in `calendars/metadata.json`
+
+The generator includes `execution year - 1` through `execution year + 1` when the official notices are available.
+
+## ICS feeds
 
 ### Chinese
 
@@ -24,15 +31,39 @@ This repository scrapes the official State Council holiday notices for a rolling
 
 Use the raw GitHub URLs above in any calendar app that supports subscribing to an ICS feed.
 
-Each calendar:
+## JSON feeds
 
-- includes notices for `execution year - 1` through `execution year + 1` when already published,
-- uses the official holiday arrangement notices published by the State Council,
-- merges consecutive dates into a single all-day event,
-- includes the relevant announcement line in each event description,
-- is checked and regenerated every 5 minutes by GitHub Actions when new notice data appears.
+### Multilingual
 
-The scheduled workflow runs inside a prebuilt GitHub Container Registry image with Python, Playwright, and Chromium already installed, so recurring runs do not spend time reinstalling dependencies.
+- Rolling window feed: [data/latest.json](https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/data/latest.json)
+- Per-year feed example: [data/years/2026.json](https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/data/years/2026.json)
+
+### Localized
+
+- Chinese latest: [data/zh-CN/latest.json](https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/data/zh-CN/latest.json)
+- English latest: [data/en/latest.json](https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/data/en/latest.json)
+- Russian latest: [data/ru/latest.json](https://raw.githubusercontent.com/HankAviator/china-holiday-calendar/master/data/ru/latest.json)
+- Per-year localized feeds follow the same pattern, for example `data/zh-CN/years/2026.json`, `data/en/years/2026.json`, and `data/ru/years/2026.json`.
+
+Each JSON feed includes:
+
+- notice source metadata
+- normalized holiday arrangements with full holiday ranges and compensated working day ranges
+- a flat day-by-day list for easy machine consumption
+
+The top-level `data/latest.json` is multilingual. The localized feeds flatten the same data into the selected language.
+
+## Feed behavior
+
+Each generated feed:
+
+- uses the official holiday arrangement notices published by the State Council
+- automatically rechecks the rolling three-year window
+- merges consecutive holiday dates into a single arrangement range
+- preserves compensated working days separately
+- is regenerated every 5 minutes by GitHub Actions
+
+GitHub Actions runs inside a prebuilt GitHub Container Registry image with Python, Playwright, and Chromium already installed. The workflows also cancel superseded runs and enforce a 10-minute timeout.
 
 ## Local usage
 
@@ -49,13 +80,50 @@ Optional flags:
 ```bash
 PYTHONPATH=src python -m china_holiday_calendar --year 2026
 PYTHONPATH=src python -m china_holiday_calendar --notice-url https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm
-PYTHONPATH=src python -m china_holiday_calendar --output-dir calendars
+PYTHONPATH=src python -m china_holiday_calendar --output-dir calendars --data-output-dir data
 ```
 
 `--year` is the anchor year. For example, `--year 2026` tries to include 2025, 2026, and 2027 if their official notices are available.
 
-The generator writes metadata to `calendars/metadata.json`.
+Default output structure:
+
+```text
+calendars/
+  zh-CN/
+    holiday-and-compensate.ics
+    holidays-only.ics
+    compensate-working-days-only.ics
+  en/
+    holiday-and-compensate.ics
+    holidays-only.ics
+    compensate-working-days-only.ics
+  ru/
+    holiday-and-compensate.ics
+    holidays-only.ics
+    compensate-working-days-only.ics
+  metadata.json
+data/
+  latest.json
+  years/
+    2025.json
+    2026.json
+  zh-CN/
+    latest.json
+    years/
+      2025.json
+      2026.json
+  en/
+    latest.json
+    years/
+      2025.json
+      2026.json
+  ru/
+    latest.json
+    years/
+      2025.json
+      2026.json
+```
 
 ## Automation image
 
-GitHub Actions uses `ghcr.io/hankaviator/china-holiday-calendar-runner:latest` for scheduled runs. Rebuild it by running the `Build Calendar Runner Image` workflow, or let it refresh automatically when `requirements.txt` or `.github/docker/calendar-runner/Dockerfile` changes on `master`.
+Scheduled updates use `ghcr.io/hankaviator/china-holiday-calendar-runner:latest`. Rebuild it by running the `Build Calendar Runner Image` workflow, or let it refresh automatically when `requirements.txt`, `.github/docker/calendar-runner/Dockerfile`, or the image workflow changes on `master`.

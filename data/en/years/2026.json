@@ -1,0 +1,419 @@
+{
+  "generated_at": "2026-05-04T03:09:31.917120+00:00",
+  "language": "en",
+  "holiday_year": 2026,
+  "holiday_day_count": 33,
+  "compensated_working_day_count": 6,
+  "source": {
+    "title": "General Office of the State Council Notice on the 2026 Public Holiday Arrangements",
+    "source_url": "https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm",
+    "published_at": "2025-11-04"
+  },
+  "arrangements": [
+    {
+      "name": "New Year's Day",
+      "holiday_dates": [
+        "2026-01-01",
+        "2026-01-02",
+        "2026-01-03"
+      ],
+      "holiday_date_ranges": [
+        {
+          "start": "2026-01-01",
+          "end": "2026-01-03"
+        }
+      ],
+      "compensated_working_days": [
+        "2026-01-04"
+      ],
+      "compensated_working_day_ranges": [
+        {
+          "start": "2026-01-04",
+          "end": "2026-01-04"
+        }
+      ],
+      "source_line": "New Year's Day: holiday from Jan 1, 2026 to Jan 3, 2026. Compensated working day(s): Jan 4, 2026."
+    },
+    {
+      "name": "Spring Festival",
+      "holiday_dates": [
+        "2026-02-15",
+        "2026-02-16",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-02-19",
+        "2026-02-20",
+        "2026-02-21",
+        "2026-02-22",
+        "2026-02-23"
+      ],
+      "holiday_date_ranges": [
+        {
+          "start": "2026-02-15",
+          "end": "2026-02-23"
+        }
+      ],
+      "compensated_working_days": [
+        "2026-02-14",
+        "2026-02-28"
+      ],
+      "compensated_working_day_ranges": [
+        {
+          "start": "2026-02-14",
+          "end": "2026-02-14"
+        },
+        {
+          "start": "2026-02-28",
+          "end": "2026-02-28"
+        }
+      ],
+      "source_line": "Spring Festival: holiday from Feb 15, 2026 to Feb 23, 2026. Compensated working day(s): Feb 14, 2026, and Feb 28, 2026."
+    },
+    {
+      "name": "Qingming Festival",
+      "holiday_dates": [
+        "2026-04-04",
+        "2026-04-05",
+        "2026-04-06"
+      ],
+      "holiday_date_ranges": [
+        {
+          "start": "2026-04-04",
+          "end": "2026-04-06"
+        }
+      ],
+      "compensated_working_days": [],
+      "compensated_working_day_ranges": [],
+      "source_line": "Qingming Festival: holiday from Apr 4, 2026 to Apr 6, 2026."
+    },
+    {
+      "name": "Labour Day",
+      "holiday_dates": [
+        "2026-05-01",
+        "2026-05-02",
+        "2026-05-03",
+        "2026-05-04",
+        "2026-05-05"
+      ],
+      "holiday_date_ranges": [
+        {
+          "start": "2026-05-01",
+          "end": "2026-05-05"
+        }
+      ],
+      "compensated_working_days": [
+        "2026-05-09"
+      ],
+      "compensated_working_day_ranges": [
+        {
+          "start": "2026-05-09",
+          "end": "2026-05-09"
+        }
+      ],
+      "source_line": "Labour Day: holiday from May 1, 2026 to May 5, 2026. Compensated working day(s): May 9, 2026."
+    },
+    {
+      "name": "Dragon Boat Festival",
+      "holiday_dates": [
+        "2026-06-19",
+        "2026-06-20",
+        "2026-06-21"
+      ],
+      "holiday_date_ranges": [
+        {
+          "start": "2026-06-19",
+          "end": "2026-06-21"
+        }
+      ],
+      "compensated_working_days": [],
+      "compensated_working_day_ranges": [],
+      "source_line": "Dragon Boat Festival: holiday from Jun 19, 2026 to Jun 21, 2026."
+    },
+    {
+      "name": "Mid-Autumn Festival",
+      "holiday_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ],
+      "holiday_date_ranges": [
+        {
+          "start": "2026-09-25",
+          "end": "2026-09-27"
+        }
+      ],
+      "compensated_working_days": [],
+      "compensated_working_day_ranges": [],
+      "source_line": "Mid-Autumn Festival: holiday from Sep 25, 2026 to Sep 27, 2026."
+    },
+    {
+      "name": "National Day",
+      "holiday_dates": [
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      "holiday_date_ranges": [
+        {
+          "start": "2026-10-01",
+          "end": "2026-10-07"
+        }
+      ],
+      "compensated_working_days": [
+        "2026-09-20",
+        "2026-10-10"
+      ],
+      "compensated_working_day_ranges": [
+        {
+          "start": "2026-09-20",
+          "end": "2026-09-20"
+        },
+        {
+          "start": "2026-10-10",
+          "end": "2026-10-10"
+        }
+      ],
+      "source_line": "National Day: holiday from Oct 1, 2026 to Oct 7, 2026. Compensated working day(s): Sep 20, 2026, and Oct 10, 2026."
+    }
+  ],
+  "days": [
+    {
+      "date": "2026-01-01",
+      "type": "holiday",
+      "name": "New Year's Day",
+      "source_line": "New Year's Day: holiday from Jan 1, 2026 to Jan 3, 2026. Compensated working day(s): Jan 4, 2026."
+    },
+    {
+      "date": "2026-01-02",
+      "type": "holiday",
+      "name": "New Year's Day",
+      "source_line": "New Year's Day: holiday from Jan 1, 2026 to Jan 3, 2026. Compensated working day(s): Jan 4, 2026."
+    },
+    {
+      "date": "2026-01-03",
+      "type": "holiday",
+      "name": "New Year's Day",
+      "source_line": "New Year's Day: holiday from Jan 1, 2026 to Jan 3, 2026. Compensated working day(s): Jan 4, 2026."
+    },
+    {
+      "date": "2026-01-04",
+      "type": "compensated_working_day",
+      "name": "New Year's Day",
+      "source_line": "New Year's Day: holiday from Jan 1, 2026 to Jan 3, 2026. Compensated working day(s): Jan 4, 2026."
+    },
+    {
+      "date": "2026-02-14",
+      "type": "compensated_working_day",
+      "name": "Spring Festival",
+      "source_line": "Spring Festival: holiday from Feb 15, 2026 to Feb 23, 2026. Compensated working day(s): Feb 14, 2026, and Feb 28, 2026."
+    },
+    {
+      "date": "2026-02-15",
+      "type": "holiday",
+      "name": "Spring Festival",
+      "source_line": "Spring Festival: holiday from Feb 15, 2026 to Feb 23, 2026. Compensated working day(s): Feb 14, 2026, and Feb 28, 2026."
+    },
+    {
+      "date": "2026-02-16",
+      "type": "holiday",
+      "name": "Spring Festival",
+      "source_line": "Spring Festival: holiday from Feb 15, 2026 to Feb 23, 2026. Compensated working day(s): Feb 14, 2026, and Feb 28, 2026."
+    },
+    {
+      "date": "2026-02-17",
+      "type": "holiday",
+      "name": "Spring Festival",
+      "source_line": "Spring Festival: holiday from Feb 15, 2026 to Feb 23, 2026. Compensated working day(s): Feb 14, 2026, and Feb 28, 2026."
+    },
+    {
+      "date": "2026-02-18",
+      "type": "holiday",
+      "name": "Spring Festival",
+      "source_line": "Spring Festival: holiday from Feb 15, 2026 to Feb 23, 2026. Compensated working day(s): Feb 14, 2026, and Feb 28, 2026."
+    },
+    {
+      "date": "2026-02-19",
+      "type": "holiday",
+      "name": "Spring Festival",
+      "source_line": "Spring Festival: holiday from Feb 15, 2026 to Feb 23, 2026. Compensated working day(s): Feb 14, 2026, and Feb 28, 2026."
+    },
+    {
+      "date": "2026-02-20",
+      "type": "holiday",
+      "name": "Spring Festival",
+      "source_line": "Spring Festival: holiday from Feb 15, 2026 to Feb 23, 2026. Compensated working day(s): Feb 14, 2026, and Feb 28, 2026."
+    },
+    {
+      "date": "2026-02-21",
+      "type": "holiday",
+      "name": "Spring Festival",
+      "source_line": "Spring Festival: holiday from Feb 15, 2026 to Feb 23, 2026. Compensated working day(s): Feb 14, 2026, and Feb 28, 2026."
+    },
+    {
+      "date": "2026-02-22",
+      "type": "holiday",
+      "name": "Spring Festival",
+      "source_line": "Spring Festival: holiday from Feb 15, 2026 to Feb 23, 2026. Compensated working day(s): Feb 14, 2026, and Feb 28, 2026."
+    },
+    {
+      "date": "2026-02-23",
+      "type": "holiday",
+      "name": "Spring Festival",
+      "source_line": "Spring Festival: holiday from Feb 15, 2026 to Feb 23, 2026. Compensated working day(s): Feb 14, 2026, and Feb 28, 2026."
+    },
+    {
+      "date": "2026-02-28",
+      "type": "compensated_working_day",
+      "name": "Spring Festival",
+      "source_line": "Spring Festival: holiday from Feb 15, 2026 to Feb 23, 2026. Compensated working day(s): Feb 14, 2026, and Feb 28, 2026."
+    },
+    {
+      "date": "2026-04-04",
+      "type": "holiday",
+      "name": "Qingming Festival",
+      "source_line": "Qingming Festival: holiday from Apr 4, 2026 to Apr 6, 2026."
+    },
+    {
+      "date": "2026-04-05",
+      "type": "holiday",
+      "name": "Qingming Festival",
+      "source_line": "Qingming Festival: holiday from Apr 4, 2026 to Apr 6, 2026."
+    },
+    {
+      "date": "2026-04-06",
+      "type": "holiday",
+      "name": "Qingming Festival",
+      "source_line": "Qingming Festival: holiday from Apr 4, 2026 to Apr 6, 2026."
+    },
+    {
+      "date": "2026-05-01",
+      "type": "holiday",
+      "name": "Labour Day",
+      "source_line": "Labour Day: holiday from May 1, 2026 to May 5, 2026. Compensated working day(s): May 9, 2026."
+    },
+    {
+      "date": "2026-05-02",
+      "type": "holiday",
+      "name": "Labour Day",
+      "source_line": "Labour Day: holiday from May 1, 2026 to May 5, 2026. Compensated working day(s): May 9, 2026."
+    },
+    {
+      "date": "2026-05-03",
+      "type": "holiday",
+      "name": "Labour Day",
+      "source_line": "Labour Day: holiday from May 1, 2026 to May 5, 2026. Compensated working day(s): May 9, 2026."
+    },
+    {
+      "date": "2026-05-04",
+      "type": "holiday",
+      "name": "Labour Day",
+      "source_line": "Labour Day: holiday from May 1, 2026 to May 5, 2026. Compensated working day(s): May 9, 2026."
+    },
+    {
+      "date": "2026-05-05",
+      "type": "holiday",
+      "name": "Labour Day",
+      "source_line": "Labour Day: holiday from May 1, 2026 to May 5, 2026. Compensated working day(s): May 9, 2026."
+    },
+    {
+      "date": "2026-05-09",
+      "type": "compensated_working_day",
+      "name": "Labour Day",
+      "source_line": "Labour Day: holiday from May 1, 2026 to May 5, 2026. Compensated working day(s): May 9, 2026."
+    },
+    {
+      "date": "2026-06-19",
+      "type": "holiday",
+      "name": "Dragon Boat Festival",
+      "source_line": "Dragon Boat Festival: holiday from Jun 19, 2026 to Jun 21, 2026."
+    },
+    {
+      "date": "2026-06-20",
+      "type": "holiday",
+      "name": "Dragon Boat Festival",
+      "source_line": "Dragon Boat Festival: holiday from Jun 19, 2026 to Jun 21, 2026."
+    },
+    {
+      "date": "2026-06-21",
+      "type": "holiday",
+      "name": "Dragon Boat Festival",
+      "source_line": "Dragon Boat Festival: holiday from Jun 19, 2026 to Jun 21, 2026."
+    },
+    {
+      "date": "2026-09-20",
+      "type": "compensated_working_day",
+      "name": "National Day",
+      "source_line": "National Day: holiday from Oct 1, 2026 to Oct 7, 2026. Compensated working day(s): Sep 20, 2026, and Oct 10, 2026."
+    },
+    {
+      "date": "2026-09-25",
+      "type": "holiday",
+      "name": "Mid-Autumn Festival",
+      "source_line": "Mid-Autumn Festival: holiday from Sep 25, 2026 to Sep 27, 2026."
+    },
+    {
+      "date": "2026-09-26",
+      "type": "holiday",
+      "name": "Mid-Autumn Festival",
+      "source_line": "Mid-Autumn Festival: holiday from Sep 25, 2026 to Sep 27, 2026."
+    },
+    {
+      "date": "2026-09-27",
+      "type": "holiday",
+      "name": "Mid-Autumn Festival",
+      "source_line": "Mid-Autumn Festival: holiday from Sep 25, 2026 to Sep 27, 2026."
+    },
+    {
+      "date": "2026-10-01",
+      "type": "holiday",
+      "name": "National Day",
+      "source_line": "National Day: holiday from Oct 1, 2026 to Oct 7, 2026. Compensated working day(s): Sep 20, 2026, and Oct 10, 2026."
+    },
+    {
+      "date": "2026-10-02",
+      "type": "holiday",
+      "name": "National Day",
+      "source_line": "National Day: holiday from Oct 1, 2026 to Oct 7, 2026. Compensated working day(s): Sep 20, 2026, and Oct 10, 2026."
+    },
+    {
+      "date": "2026-10-03",
+      "type": "holiday",
+      "name": "National Day",
+      "source_line": "National Day: holiday from Oct 1, 2026 to Oct 7, 2026. Compensated working day(s): Sep 20, 2026, and Oct 10, 2026."
+    },
+    {
+      "date": "2026-10-04",
+      "type": "holiday",
+      "name": "National Day",
+      "source_line": "National Day: holiday from Oct 1, 2026 to Oct 7, 2026. Compensated working day(s): Sep 20, 2026, and Oct 10, 2026."
+    },
+    {
+      "date": "2026-10-05",
+      "type": "holiday",
+      "name": "National Day",
+      "source_line": "National Day: holiday from Oct 1, 2026 to Oct 7, 2026. Compensated working day(s): Sep 20, 2026, and Oct 10, 2026."
+    },
+    {
+      "date": "2026-10-06",
+      "type": "holiday",
+      "name": "National Day",
+      "source_line": "National Day: holiday from Oct 1, 2026 to Oct 7, 2026. Compensated working day(s): Sep 20, 2026, and Oct 10, 2026."
+    },
+    {
+      "date": "2026-10-07",
+      "type": "holiday",
+      "name": "National Day",
+      "source_line": "National Day: holiday from Oct 1, 2026 to Oct 7, 2026. Compensated working day(s): Sep 20, 2026, and Oct 10, 2026."
+    },
+    {
+      "date": "2026-10-10",
+      "type": "compensated_working_day",
+      "name": "National Day",
+      "source_line": "National Day: holiday from Oct 1, 2026 to Oct 7, 2026. Compensated working day(s): Sep 20, 2026, and Oct 10, 2026."
+    }
+  ]
+}

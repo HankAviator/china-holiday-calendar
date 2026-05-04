@@ -27,9 +27,15 @@ NOTICE_TITLE_TEMPLATE_EN = (
 NOTICE_TITLE_TEMPLATE_RU = (
     "Уведомление Канцелярии Госсовета КНР о графике части праздничных дней на {year} год"
 )
-KNOWN_NOTICE_URLS = {
+KNOWN_NOTICE_URL_CATALOG = {
     2025: "https://www.gov.cn/zhengce/zhengceku/202411/content_6986383.htm",
     2026: "https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm",
+}
+_RUNTIME_YEAR = datetime.now(timezone.utc).year
+KNOWN_NOTICE_URLS = {
+    year: url
+    for year, url in KNOWN_NOTICE_URL_CATALOG.items()
+    if _RUNTIME_YEAR - 1 <= year <= _RUNTIME_YEAR + 1
 }
 HOLIDAY_NAME_TRANSLATIONS = {
     "en": {
@@ -104,17 +110,35 @@ class CalendarEvent:
     uid_seed: str
 
 
+SUPPORTED_LANGUAGES = ("zh-CN", "en", "ru")
+CALENDAR_VARIANTS = (
+    ("holiday-and-compensate", "zh-CN", True, True),
+    ("holidays-only", "zh-CN", True, False),
+    ("compensate-working-days-only", "zh-CN", False, True),
+    ("holiday-and-compensate", "en", True, True),
+    ("holidays-only", "en", True, False),
+    ("compensate-working-days-only", "en", False, True),
+    ("holiday-and-compensate", "ru", True, True),
+    ("holidays-only", "ru", True, False),
+    ("compensate-working-days-only", "ru", False, True),
+)
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     args = parse_args(argv)
-    output_dir = args.output_dir.resolve()
-    output_dir.mkdir(parents=True, exist_ok=True)
+    calendar_output_dir = args.output_dir.resolve()
+    data_output_dir = args.data_output_dir.resolve()
+    calendar_output_dir.mkdir(parents=True, exist_ok=True)
+    data_output_dir.mkdir(parents=True, exist_ok=True)
+    generated_at = datetime.now(timezone.utc)
 
     with requests.Session() as session:
         session.headers.update({"User-Agent": USER_AGENT})
         notices = fetch_notices(session, args.year, args.notice_url)
 
-    write_calendars(notices, output_dir)
-    write_metadata(notices, output_dir)
+    write_calendars(notices, calendar_output_dir, generated_at)
+    write_metadata(notices, calendar_output_dir, generated_at)
+    write_json_feeds(notices, data_output_dir, generated_at)
     return 0
 
 
@@ -132,6 +156,12 @@ def parse_args(argv: Sequence[str] | None) -> argparse.Namespace:
         type=Path,
         default=Path("calendars"),
         help="Directory where ICS files and metadata are written.",
+    )
+    parser.add_argument(
+        "--data-output-dir",
+        type=Path,
+        default=Path("data"),
+        help="Directory where static JSON feeds are written.",
     )
     parser.add_argument(
         "--notice-url",
@@ -446,25 +476,18 @@ def translate_holiday_name_ru(holiday_name_zh: str) -> str:
     return " / ".join(translated)
 
 
-def write_calendars(notices: Sequence[Notice], output_dir: Path) -> None:
-    variants = [
-        ("holiday-and-compensate", "zh-CN", True, True),
-        ("holidays-only", "zh-CN", True, False),
-        ("compensate-working-days-only", "zh-CN", False, True),
-        ("holiday-and-compensate", "en", True, True),
-        ("holidays-only", "en", True, False),
-        ("compensate-working-days-only", "en", False, True),
-        ("holiday-and-compensate", "ru", True, True),
-        ("holidays-only", "ru", True, False),
-        ("compensate-working-days-only", "ru", False, True),
-    ]
-    for slug, language, include_holidays, include_workdays in variants:
+def write_calendars(
+    notices: Sequence[Notice],
+    output_dir: Path,
+    generated_at: datetime,
+) -> None:
+    for slug, language, include_holidays, include_workdays in CALENDAR_VARIANTS:
         language_dir = output_dir / language
         language_dir.mkdir(parents=True, exist_ok=True)
         path = language_dir / f"{slug}.ics"
         events = build_events(notices, language, include_holidays, include_workdays)
         calendar_name = build_calendar_name(notices, language, slug)
-        write_ics_file(path, calendar_name, events)
+        write_ics_file(path, calendar_name, events, generated_at)
 
 
 def build_events(
@@ -587,8 +610,13 @@ def build_calendar_name(notices: Sequence[Notice], language: str, slug: str) -> 
     return en_names[slug]
 
 
-def write_ics_file(path: Path, calendar_name: str, events: Sequence[CalendarEvent]) -> None:
-    now_stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+def write_ics_file(
+    path: Path,
+    calendar_name: str,
+    events: Sequence[CalendarEvent],
+    generated_at: datetime,
+) -> None:
+    now_stamp = generated_at.strftime("%Y%m%dT%H%M%SZ")
     lines = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
@@ -619,7 +647,11 @@ def write_ics_file(path: Path, calendar_name: str, events: Sequence[CalendarEven
     path.write_text(content, encoding="utf-8")
 
 
-def write_metadata(notices: Sequence[Notice], output_dir: Path) -> None:
+def write_metadata(
+    notices: Sequence[Notice],
+    output_dir: Path,
+    generated_at: datetime,
+) -> None:
     first_year = min(notice.holiday_year for notice in notices)
     last_year = max(notice.holiday_year for notice in notices)
     metadata = {
@@ -627,7 +659,7 @@ def write_metadata(notices: Sequence[Notice], output_dir: Path) -> None:
             "start": first_year,
             "end": last_year,
         },
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": generated_at.isoformat(),
         "notices": [
             {
                 "holiday_year": notice.holiday_year,
@@ -652,6 +684,234 @@ def write_metadata(notices: Sequence[Notice], output_dir: Path) -> None:
     }
     metadata_path = output_dir / "metadata.json"
     metadata_path.write_text(json.dumps(metadata, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def write_json_feeds(
+    notices: Sequence[Notice],
+    output_dir: Path,
+    generated_at: datetime,
+) -> None:
+    write_json_file(output_dir / "latest.json", build_json_window_feed(notices, generated_at))
+
+    years_dir = output_dir / "years"
+    years_dir.mkdir(parents=True, exist_ok=True)
+    current_year_files = {f"{notice.holiday_year}.json" for notice in notices}
+    for notice in notices:
+        write_json_file(
+            years_dir / f"{notice.holiday_year}.json",
+            build_json_year_feed(notice, generated_at),
+        )
+    prune_year_json_directory(years_dir, current_year_files)
+
+    for language in SUPPORTED_LANGUAGES:
+        language_dir = output_dir / language
+        language_dir.mkdir(parents=True, exist_ok=True)
+        write_json_file(
+            language_dir / "latest.json",
+            build_json_window_feed(notices, generated_at, language),
+        )
+
+        language_years_dir = language_dir / "years"
+        language_years_dir.mkdir(parents=True, exist_ok=True)
+        for notice in notices:
+            write_json_file(
+                language_years_dir / f"{notice.holiday_year}.json",
+                build_json_year_feed(notice, generated_at, language),
+            )
+        prune_year_json_directory(language_years_dir, current_year_files)
+
+
+def build_json_window_feed(
+    notices: Sequence[Notice],
+    generated_at: datetime,
+    language: str | None = None,
+) -> dict[str, object]:
+    first_year = min(notice.holiday_year for notice in notices)
+    last_year = max(notice.holiday_year for notice in notices)
+    payload: dict[str, object] = {
+        "generated_at": generated_at.isoformat(),
+        "year_window": {
+            "start": first_year,
+            "end": last_year,
+        },
+        "years": [build_json_year_payload(notice, language) for notice in notices],
+    }
+    if language is None:
+        payload["languages"] = list(SUPPORTED_LANGUAGES)
+    else:
+        payload["language"] = language
+    return payload
+
+
+def build_json_year_feed(
+    notice: Notice,
+    generated_at: datetime,
+    language: str | None = None,
+) -> dict[str, object]:
+    payload = {
+        "generated_at": generated_at.isoformat(),
+    }
+    if language is None:
+        payload["languages"] = list(SUPPORTED_LANGUAGES)
+    else:
+        payload["language"] = language
+    payload.update(build_json_year_payload(notice, language))
+    return payload
+
+
+def build_json_year_payload(notice: Notice, language: str | None = None) -> dict[str, object]:
+    holiday_day_count = sum(len(line.holiday_dates) for line in notice.lines)
+    workday_count = sum(len(line.workday_dates) for line in notice.lines)
+    return {
+        "holiday_year": notice.holiday_year,
+        "holiday_day_count": holiday_day_count,
+        "compensated_working_day_count": workday_count,
+        "source": build_json_source_payload(notice, language),
+        "arrangements": [
+            build_json_arrangement_payload(line, language) for line in notice.lines
+        ],
+        "days": build_json_day_payloads(notice, language),
+    }
+
+
+def build_json_source_payload(
+    notice: Notice,
+    language: str | None = None,
+) -> dict[str, object]:
+    if language is None:
+        title: str | dict[str, str] = {
+            "zh-CN": notice.title_zh,
+            "en": notice.title_en,
+            "ru": NOTICE_TITLE_TEMPLATE_RU.format(year=notice.holiday_year),
+        }
+    else:
+        title = build_localized_notice_title(notice, language)
+
+    return {
+        "title": title,
+        "source_url": notice.source_url,
+        "published_at": notice.published_at.isoformat(),
+    }
+
+
+def build_json_arrangement_payload(
+    line: NoticeLine,
+    language: str | None = None,
+) -> dict[str, object]:
+    return {
+        "name": build_localized_holiday_name(line, language),
+        "holiday_dates": build_date_strings(line.holiday_dates),
+        "holiday_date_ranges": build_date_ranges_payload(line.holiday_dates),
+        "compensated_working_days": build_date_strings(line.workday_dates),
+        "compensated_working_day_ranges": build_date_ranges_payload(line.workday_dates),
+        "source_line": build_localized_notice_line(line, language),
+    }
+
+
+def build_json_day_payloads(
+    notice: Notice,
+    language: str | None = None,
+) -> list[dict[str, object]]:
+    day_payloads: list[dict[str, object]] = []
+
+    for line in notice.lines:
+        for current_date in line.holiday_dates:
+            day_payloads.append(
+                build_json_day_payload(line, current_date, "holiday", language)
+            )
+        for current_date in line.workday_dates:
+            day_payloads.append(
+                build_json_day_payload(
+                    line,
+                    current_date,
+                    "compensated_working_day",
+                    language,
+                )
+            )
+
+    return sorted(day_payloads, key=lambda payload: (payload["date"], payload["type"]))
+
+
+def build_json_day_payload(
+    line: NoticeLine,
+    current_date: date,
+    event_type: str,
+    language: str | None = None,
+) -> dict[str, object]:
+    return {
+        "date": current_date.isoformat(),
+        "type": event_type,
+        "name": build_localized_holiday_name(line, language),
+        "source_line": build_localized_notice_line(line, language),
+    }
+
+
+def build_localized_notice_title(notice: Notice, language: str) -> str:
+    if language == "zh-CN":
+        return notice.title_zh
+    if language == "ru":
+        return NOTICE_TITLE_TEMPLATE_RU.format(year=notice.holiday_year)
+    return notice.title_en
+
+
+def build_localized_holiday_name(
+    line: NoticeLine,
+    language: str | None = None,
+) -> str | dict[str, str]:
+    if language is None:
+        return {
+            "zh-CN": line.holiday_name_zh,
+            "en": line.holiday_name_en,
+            "ru": translate_holiday_name_ru(line.holiday_name_zh),
+        }
+    if language == "zh-CN":
+        return line.holiday_name_zh
+    if language == "ru":
+        return translate_holiday_name_ru(line.holiday_name_zh)
+    return line.holiday_name_en
+
+
+def build_localized_notice_line(
+    line: NoticeLine,
+    language: str | None = None,
+) -> str | dict[str, str]:
+    russian_line = build_russian_line(line)
+    if language is None:
+        return {
+            "zh-CN": line.line_zh,
+            "en": line.line_en,
+            "ru": russian_line,
+        }
+    if language == "zh-CN":
+        return line.line_zh
+    if language == "ru":
+        return russian_line
+    return line.line_en
+
+
+def build_date_strings(dates: Sequence[date]) -> list[str]:
+    return [value.isoformat() for value in dates]
+
+
+def build_date_ranges_payload(dates: Sequence[date]) -> list[dict[str, str]]:
+    return [
+        {
+            "start": start.isoformat(),
+            "end": end.isoformat(),
+        }
+        for start, end in merge_consecutive_dates(dates)
+    ]
+
+
+def write_json_file(path: Path, payload: dict[str, object]) -> None:
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def prune_year_json_directory(directory: Path, expected_filenames: set[str]) -> None:
+    for path in directory.glob("*.json"):
+        if path.name in expected_filenames:
+            continue
+        path.unlink()
 
 
 def merge_consecutive_dates(dates: Sequence[date]) -> list[tuple[date, date]]:

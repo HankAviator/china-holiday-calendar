@@ -1,0 +1,677 @@
+{
+  "generated_at": "2026-05-04T03:09:31.917120+00:00",
+  "languages": [
+    "zh-CN",
+    "en",
+    "ru"
+  ],
+  "holiday_year": 2025,
+  "holiday_day_count": 28,
+  "compensated_working_day_count": 5,
+  "source": {
+    "title": {
+      "zh-CN": "国务院办公厅关于2025年部分节假日安排的通知",
+      "en": "General Office of the State Council Notice on the 2025 Public Holiday Arrangements",
+      "ru": "Уведомление Канцелярии Госсовета КНР о графике части праздничных дней на 2025 год"
+    },
+    "source_url": "https://www.gov.cn/zhengce/zhengceku/202411/content_6986383.htm",
+    "published_at": "2024-11-12"
+  },
+  "arrangements": [
+    {
+      "name": {
+        "zh-CN": "元旦",
+        "en": "New Year's Day",
+        "ru": "Новый год"
+      },
+      "holiday_dates": [
+        "2025-01-01"
+      ],
+      "holiday_date_ranges": [
+        {
+          "start": "2025-01-01",
+          "end": "2025-01-01"
+        }
+      ],
+      "compensated_working_days": [],
+      "compensated_working_day_ranges": [],
+      "source_line": {
+        "zh-CN": "一、元旦： 1月1日（周三）放假1天，不调休。",
+        "en": "New Year's Day: holiday on Jan 1, 2025.",
+        "ru": "Новый год: выходной день 1 января 2025 г.."
+      }
+    },
+    {
+      "name": {
+        "zh-CN": "春节",
+        "en": "Spring Festival",
+        "ru": "Праздник весны"
+      },
+      "holiday_dates": [
+        "2025-01-28",
+        "2025-01-29",
+        "2025-01-30",
+        "2025-01-31",
+        "2025-02-01",
+        "2025-02-02",
+        "2025-02-03",
+        "2025-02-04"
+      ],
+      "holiday_date_ranges": [
+        {
+          "start": "2025-01-28",
+          "end": "2025-02-04"
+        }
+      ],
+      "compensated_working_days": [
+        "2025-01-26",
+        "2025-02-08"
+      ],
+      "compensated_working_day_ranges": [
+        {
+          "start": "2025-01-26",
+          "end": "2025-01-26"
+        },
+        {
+          "start": "2025-02-08",
+          "end": "2025-02-08"
+        }
+      ],
+      "source_line": {
+        "zh-CN": "二、春节： 1月28日（农历除夕、周二）至2月4日（农历正月初七、周二）放假调休，共8天。1月26日（周日）、2月8日（周六）上班。",
+        "en": "Spring Festival: holiday from Jan 28, 2025 to Feb 4, 2025. Compensated working day(s): Jan 26, 2025, and Feb 8, 2025.",
+        "ru": "Праздник весны: выходные с 28 января 2025 г. по 4 февраля 2025 г.. Компенсационные рабочие дни: 26 января 2025 г. и 8 февраля 2025 г.."
+      }
+    },
+    {
+      "name": {
+        "zh-CN": "清明节",
+        "en": "Qingming Festival",
+        "ru": "Праздник Цинмин"
+      },
+      "holiday_dates": [
+        "2025-04-04",
+        "2025-04-05",
+        "2025-04-06"
+      ],
+      "holiday_date_ranges": [
+        {
+          "start": "2025-04-04",
+          "end": "2025-04-06"
+        }
+      ],
+      "compensated_working_days": [],
+      "compensated_working_day_ranges": [],
+      "source_line": {
+        "zh-CN": "三、清明节： 4月4日（周五）至6日（周日）放假，共3天。",
+        "en": "Qingming Festival: holiday from Apr 4, 2025 to Apr 6, 2025.",
+        "ru": "Праздник Цинмин: выходные с 4 апреля 2025 г. по 6 апреля 2025 г.."
+      }
+    },
+    {
+      "name": {
+        "zh-CN": "劳动节",
+        "en": "Labour Day",
+        "ru": "Праздник труда"
+      },
+      "holiday_dates": [
+        "2025-05-01",
+        "2025-05-02",
+        "2025-05-03",
+        "2025-05-04",
+        "2025-05-05"
+      ],
+      "holiday_date_ranges": [
+        {
+          "start": "2025-05-01",
+          "end": "2025-05-05"
+        }
+      ],
+      "compensated_working_days": [
+        "2025-04-27"
+      ],
+      "compensated_working_day_ranges": [
+        {
+          "start": "2025-04-27",
+          "end": "2025-04-27"
+        }
+      ],
+      "source_line": {
+        "zh-CN": "四、劳动节： 5月1日（周四）至5日（周一）放假调休，共5天。4月27日（周日）上班。",
+        "en": "Labour Day: holiday from May 1, 2025 to May 5, 2025. Compensated working day(s): Apr 27, 2025.",
+        "ru": "Праздник труда: выходные с 1 мая 2025 г. по 5 мая 2025 г.. Компенсационные рабочие дни: 27 апреля 2025 г.."
+      }
+    },
+    {
+      "name": {
+        "zh-CN": "端午节",
+        "en": "Dragon Boat Festival",
+        "ru": "Праздник драконьих лодок"
+      },
+      "holiday_dates": [
+        "2025-05-31",
+        "2025-06-01",
+        "2025-06-02"
+      ],
+      "holiday_date_ranges": [
+        {
+          "start": "2025-05-31",
+          "end": "2025-06-02"
+        }
+      ],
+      "compensated_working_days": [],
+      "compensated_working_day_ranges": [],
+      "source_line": {
+        "zh-CN": "五、端午节： 5月31日（周六）至6月2日（周一）放假，共3天。",
+        "en": "Dragon Boat Festival: holiday from May 31, 2025 to Jun 2, 2025.",
+        "ru": "Праздник драконьих лодок: выходные с 31 мая 2025 г. по 2 июня 2025 г.."
+      }
+    },
+    {
+      "name": {
+        "zh-CN": "国庆节、中秋节",
+        "en": "National Day / Mid-Autumn Festival",
+        "ru": "Национальный праздник / Праздник середины осени"
+      },
+      "holiday_dates": [
+        "2025-10-01",
+        "2025-10-02",
+        "2025-10-03",
+        "2025-10-04",
+        "2025-10-05",
+        "2025-10-06",
+        "2025-10-07",
+        "2025-10-08"
+      ],
+      "holiday_date_ranges": [
+        {
+          "start": "2025-10-01",
+          "end": "2025-10-08"
+        }
+      ],
+      "compensated_working_days": [
+        "2025-09-28",
+        "2025-10-11"
+      ],
+      "compensated_working_day_ranges": [
+        {
+          "start": "2025-09-28",
+          "end": "2025-09-28"
+        },
+        {
+          "start": "2025-10-11",
+          "end": "2025-10-11"
+        }
+      ],
+      "source_line": {
+        "zh-CN": "六、国庆节、中秋节： 10月1日（周三）至8日（周三）放假调休，共8天。9月28日（周日）、10月11日（周六）上班。",
+        "en": "National Day / Mid-Autumn Festival: holiday from Oct 1, 2025 to Oct 8, 2025. Compensated working day(s): Sep 28, 2025, and Oct 11, 2025.",
+        "ru": "Национальный праздник / Праздник середины осени: выходные с 1 октября 2025 г. по 8 октября 2025 г.. Компенсационные рабочие дни: 28 сентября 2025 г. и 11 октября 2025 г.."
+      }
+    }
+  ],
+  "days": [
+    {
+      "date": "2025-01-01",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "元旦",
+        "en": "New Year's Day",
+        "ru": "Новый год"
+      },
+      "source_line": {
+        "zh-CN": "一、元旦： 1月1日（周三）放假1天，不调休。",
+        "en": "New Year's Day: holiday on Jan 1, 2025.",
+        "ru": "Новый год: выходной день 1 января 2025 г.."
+      }
+    },
+    {
+      "date": "2025-01-26",
+      "type": "compensated_working_day",
+      "name": {
+        "zh-CN": "春节",
+        "en": "Spring Festival",
+        "ru": "Праздник весны"
+      },
+      "source_line": {
+        "zh-CN": "二、春节： 1月28日（农历除夕、周二）至2月4日（农历正月初七、周二）放假调休，共8天。1月26日（周日）、2月8日（周六）上班。",
+        "en": "Spring Festival: holiday from Jan 28, 2025 to Feb 4, 2025. Compensated working day(s): Jan 26, 2025, and Feb 8, 2025.",
+        "ru": "Праздник весны: выходные с 28 января 2025 г. по 4 февраля 2025 г.. Компенсационные рабочие дни: 26 января 2025 г. и 8 февраля 2025 г.."
+      }
+    },
+    {
+      "date": "2025-01-28",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "春节",
+        "en": "Spring Festival",
+        "ru": "Праздник весны"
+      },
+      "source_line": {
+        "zh-CN": "二、春节： 1月28日（农历除夕、周二）至2月4日（农历正月初七、周二）放假调休，共8天。1月26日（周日）、2月8日（周六）上班。",
+        "en": "Spring Festival: holiday from Jan 28, 2025 to Feb 4, 2025. Compensated working day(s): Jan 26, 2025, and Feb 8, 2025.",
+        "ru": "Праздник весны: выходные с 28 января 2025 г. по 4 февраля 2025 г.. Компенсационные рабочие дни: 26 января 2025 г. и 8 февраля 2025 г.."
+      }
+    },
+    {
+      "date": "2025-01-29",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "春节",
+        "en": "Spring Festival",
+        "ru": "Праздник весны"
+      },
+      "source_line": {
+        "zh-CN": "二、春节： 1月28日（农历除夕、周二）至2月4日（农历正月初七、周二）放假调休，共8天。1月26日（周日）、2月8日（周六）上班。",
+        "en": "Spring Festival: holiday from Jan 28, 2025 to Feb 4, 2025. Compensated working day(s): Jan 26, 2025, and Feb 8, 2025.",
+        "ru": "Праздник весны: выходные с 28 января 2025 г. по 4 февраля 2025 г.. Компенсационные рабочие дни: 26 января 2025 г. и 8 февраля 2025 г.."
+      }
+    },
+    {
+      "date": "2025-01-30",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "春节",
+        "en": "Spring Festival",
+        "ru": "Праздник весны"
+      },
+      "source_line": {
+        "zh-CN": "二、春节： 1月28日（农历除夕、周二）至2月4日（农历正月初七、周二）放假调休，共8天。1月26日（周日）、2月8日（周六）上班。",
+        "en": "Spring Festival: holiday from Jan 28, 2025 to Feb 4, 2025. Compensated working day(s): Jan 26, 2025, and Feb 8, 2025.",
+        "ru": "Праздник весны: выходные с 28 января 2025 г. по 4 февраля 2025 г.. Компенсационные рабочие дни: 26 января 2025 г. и 8 февраля 2025 г.."
+      }
+    },
+    {
+      "date": "2025-01-31",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "春节",
+        "en": "Spring Festival",
+        "ru": "Праздник весны"
+      },
+      "source_line": {
+        "zh-CN": "二、春节： 1月28日（农历除夕、周二）至2月4日（农历正月初七、周二）放假调休，共8天。1月26日（周日）、2月8日（周六）上班。",
+        "en": "Spring Festival: holiday from Jan 28, 2025 to Feb 4, 2025. Compensated working day(s): Jan 26, 2025, and Feb 8, 2025.",
+        "ru": "Праздник весны: выходные с 28 января 2025 г. по 4 февраля 2025 г.. Компенсационные рабочие дни: 26 января 2025 г. и 8 февраля 2025 г.."
+      }
+    },
+    {
+      "date": "2025-02-01",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "春节",
+        "en": "Spring Festival",
+        "ru": "Праздник весны"
+      },
+      "source_line": {
+        "zh-CN": "二、春节： 1月28日（农历除夕、周二）至2月4日（农历正月初七、周二）放假调休，共8天。1月26日（周日）、2月8日（周六）上班。",
+        "en": "Spring Festival: holiday from Jan 28, 2025 to Feb 4, 2025. Compensated working day(s): Jan 26, 2025, and Feb 8, 2025.",
+        "ru": "Праздник весны: выходные с 28 января 2025 г. по 4 февраля 2025 г.. Компенсационные рабочие дни: 26 января 2025 г. и 8 февраля 2025 г.."
+      }
+    },
+    {
+      "date": "2025-02-02",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "春节",
+        "en": "Spring Festival",
+        "ru": "Праздник весны"
+      },
+      "source_line": {
+        "zh-CN": "二、春节： 1月28日（农历除夕、周二）至2月4日（农历正月初七、周二）放假调休，共8天。1月26日（周日）、2月8日（周六）上班。",
+        "en": "Spring Festival: holiday from Jan 28, 2025 to Feb 4, 2025. Compensated working day(s): Jan 26, 2025, and Feb 8, 2025.",
+        "ru": "Праздник весны: выходные с 28 января 2025 г. по 4 февраля 2025 г.. Компенсационные рабочие дни: 26 января 2025 г. и 8 февраля 2025 г.."
+      }
+    },
+    {
+      "date": "2025-02-03",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "春节",
+        "en": "Spring Festival",
+        "ru": "Праздник весны"
+      },
+      "source_line": {
+        "zh-CN": "二、春节： 1月28日（农历除夕、周二）至2月4日（农历正月初七、周二）放假调休，共8天。1月26日（周日）、2月8日（周六）上班。",
+        "en": "Spring Festival: holiday from Jan 28, 2025 to Feb 4, 2025. Compensated working day(s): Jan 26, 2025, and Feb 8, 2025.",
+        "ru": "Праздник весны: выходные с 28 января 2025 г. по 4 февраля 2025 г.. Компенсационные рабочие дни: 26 января 2025 г. и 8 февраля 2025 г.."
+      }
+    },
+    {
+      "date": "2025-02-04",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "春节",
+        "en": "Spring Festival",
+        "ru": "Праздник весны"
+      },
+      "source_line": {
+        "zh-CN": "二、春节： 1月28日（农历除夕、周二）至2月4日（农历正月初七、周二）放假调休，共8天。1月26日（周日）、2月8日（周六）上班。",
+        "en": "Spring Festival: holiday from Jan 28, 2025 to Feb 4, 2025. Compensated working day(s): Jan 26, 2025, and Feb 8, 2025.",
+        "ru": "Праздник весны: выходные с 28 января 2025 г. по 4 февраля 2025 г.. Компенсационные рабочие дни: 26 января 2025 г. и 8 февраля 2025 г.."
+      }
+    },
+    {
+      "date": "2025-02-08",
+      "type": "compensated_working_day",
+      "name": {
+        "zh-CN": "春节",
+        "en": "Spring Festival",
+        "ru": "Праздник весны"
+      },
+      "source_line": {
+        "zh-CN": "二、春节： 1月28日（农历除夕、周二）至2月4日（农历正月初七、周二）放假调休，共8天。1月26日（周日）、2月8日（周六）上班。",
+        "en": "Spring Festival: holiday from Jan 28, 2025 to Feb 4, 2025. Compensated working day(s): Jan 26, 2025, and Feb 8, 2025.",
+        "ru": "Праздник весны: выходные с 28 января 2025 г. по 4 февраля 2025 г.. Компенсационные рабочие дни: 26 января 2025 г. и 8 февраля 2025 г.."
+      }
+    },
+    {
+      "date": "2025-04-04",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "清明节",
+        "en": "Qingming Festival",
+        "ru": "Праздник Цинмин"
+      },
+      "source_line": {
+        "zh-CN": "三、清明节： 4月4日（周五）至6日（周日）放假，共3天。",
+        "en": "Qingming Festival: holiday from Apr 4, 2025 to Apr 6, 2025.",
+        "ru": "Праздник Цинмин: выходные с 4 апреля 2025 г. по 6 апреля 2025 г.."
+      }
+    },
+    {
+      "date": "2025-04-05",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "清明节",
+        "en": "Qingming Festival",
+        "ru": "Праздник Цинмин"
+      },
+      "source_line": {
+        "zh-CN": "三、清明节： 4月4日（周五）至6日（周日）放假，共3天。",
+        "en": "Qingming Festival: holiday from Apr 4, 2025 to Apr 6, 2025.",
+        "ru": "Праздник Цинмин: выходные с 4 апреля 2025 г. по 6 апреля 2025 г.."
+      }
+    },
+    {
+      "date": "2025-04-06",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "清明节",
+        "en": "Qingming Festival",
+        "ru": "Праздник Цинмин"
+      },
+      "source_line": {
+        "zh-CN": "三、清明节： 4月4日（周五）至6日（周日）放假，共3天。",
+        "en": "Qingming Festival: holiday from Apr 4, 2025 to Apr 6, 2025.",
+        "ru": "Праздник Цинмин: выходные с 4 апреля 2025 г. по 6 апреля 2025 г.."
+      }
+    },
+    {
+      "date": "2025-04-27",
+      "type": "compensated_working_day",
+      "name": {
+        "zh-CN": "劳动节",
+        "en": "Labour Day",
+        "ru": "Праздник труда"
+      },
+      "source_line": {
+        "zh-CN": "四、劳动节： 5月1日（周四）至5日（周一）放假调休，共5天。4月27日（周日）上班。",
+        "en": "Labour Day: holiday from May 1, 2025 to May 5, 2025. Compensated working day(s): Apr 27, 2025.",
+        "ru": "Праздник труда: выходные с 1 мая 2025 г. по 5 мая 2025 г.. Компенсационные рабочие дни: 27 апреля 2025 г.."
+      }
+    },
+    {
+      "date": "2025-05-01",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "劳动节",
+        "en": "Labour Day",
+        "ru": "Праздник труда"
+      },
+      "source_line": {
+        "zh-CN": "四、劳动节： 5月1日（周四）至5日（周一）放假调休，共5天。4月27日（周日）上班。",
+        "en": "Labour Day: holiday from May 1, 2025 to May 5, 2025. Compensated working day(s): Apr 27, 2025.",
+        "ru": "Праздник труда: выходные с 1 мая 2025 г. по 5 мая 2025 г.. Компенсационные рабочие дни: 27 апреля 2025 г.."
+      }
+    },
+    {
+      "date": "2025-05-02",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "劳动节",
+        "en": "Labour Day",
+        "ru": "Праздник труда"
+      },
+      "source_line": {
+        "zh-CN": "四、劳动节： 5月1日（周四）至5日（周一）放假调休，共5天。4月27日（周日）上班。",
+        "en": "Labour Day: holiday from May 1, 2025 to May 5, 2025. Compensated working day(s): Apr 27, 2025.",
+        "ru": "Праздник труда: выходные с 1 мая 2025 г. по 5 мая 2025 г.. Компенсационные рабочие дни: 27 апреля 2025 г.."
+      }
+    },
+    {
+      "date": "2025-05-03",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "劳动节",
+        "en": "Labour Day",
+        "ru": "Праздник труда"
+      },
+      "source_line": {
+        "zh-CN": "四、劳动节： 5月1日（周四）至5日（周一）放假调休，共5天。4月27日（周日）上班。",
+        "en": "Labour Day: holiday from May 1, 2025 to May 5, 2025. Compensated working day(s): Apr 27, 2025.",
+        "ru": "Праздник труда: выходные с 1 мая 2025 г. по 5 мая 2025 г.. Компенсационные рабочие дни: 27 апреля 2025 г.."
+      }
+    },
+    {
+      "date": "2025-05-04",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "劳动节",
+        "en": "Labour Day",
+        "ru": "Праздник труда"
+      },
+      "source_line": {
+        "zh-CN": "四、劳动节： 5月1日（周四）至5日（周一）放假调休，共5天。4月27日（周日）上班。",
+        "en": "Labour Day: holiday from May 1, 2025 to May 5, 2025. Compensated working day(s): Apr 27, 2025.",
+        "ru": "Праздник труда: выходные с 1 мая 2025 г. по 5 мая 2025 г.. Компенсационные рабочие дни: 27 апреля 2025 г.."
+      }
+    },
+    {
+      "date": "2025-05-05",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "劳动节",
+        "en": "Labour Day",
+        "ru": "Праздник труда"
+      },
+      "source_line": {
+        "zh-CN": "四、劳动节： 5月1日（周四）至5日（周一）放假调休，共5天。4月27日（周日）上班。",
+        "en": "Labour Day: holiday from May 1, 2025 to May 5, 2025. Compensated working day(s): Apr 27, 2025.",
+        "ru": "Праздник труда: выходные с 1 мая 2025 г. по 5 мая 2025 г.. Компенсационные рабочие дни: 27 апреля 2025 г.."
+      }
+    },
+    {
+      "date": "2025-05-31",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "端午节",
+        "en": "Dragon Boat Festival",
+        "ru": "Праздник драконьих лодок"
+      },
+      "source_line": {
+        "zh-CN": "五、端午节： 5月31日（周六）至6月2日（周一）放假，共3天。",
+        "en": "Dragon Boat Festival: holiday from May 31, 2025 to Jun 2, 2025.",
+        "ru": "Праздник драконьих лодок: выходные с 31 мая 2025 г. по 2 июня 2025 г.."
+      }
+    },
+    {
+      "date": "2025-06-01",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "端午节",
+        "en": "Dragon Boat Festival",
+        "ru": "Праздник драконьих лодок"
+      },
+      "source_line": {
+        "zh-CN": "五、端午节： 5月31日（周六）至6月2日（周一）放假，共3天。",
+        "en": "Dragon Boat Festival: holiday from May 31, 2025 to Jun 2, 2025.",
+        "ru": "Праздник драконьих лодок: выходные с 31 мая 2025 г. по 2 июня 2025 г.."
+      }
+    },
+    {
+      "date": "2025-06-02",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "端午节",
+        "en": "Dragon Boat Festival",
+        "ru": "Праздник драконьих лодок"
+      },
+      "source_line": {
+        "zh-CN": "五、端午节： 5月31日（周六）至6月2日（周一）放假，共3天。",
+        "en": "Dragon Boat Festival: holiday from May 31, 2025 to Jun 2, 2025.",
+        "ru": "Праздник драконьих лодок: выходные с 31 мая 2025 г. по 2 июня 2025 г.."
+      }
+    },
+    {
+      "date": "2025-09-28",
+      "type": "compensated_working_day",
+      "name": {
+        "zh-CN": "国庆节、中秋节",
+        "en": "National Day / Mid-Autumn Festival",
+        "ru": "Национальный праздник / Праздник середины осени"
+      },
+      "source_line": {
+        "zh-CN": "六、国庆节、中秋节： 10月1日（周三）至8日（周三）放假调休，共8天。9月28日（周日）、10月11日（周六）上班。",
+        "en": "National Day / Mid-Autumn Festival: holiday from Oct 1, 2025 to Oct 8, 2025. Compensated working day(s): Sep 28, 2025, and Oct 11, 2025.",
+        "ru": "Национальный праздник / Праздник середины осени: выходные с 1 октября 2025 г. по 8 октября 2025 г.. Компенсационные рабочие дни: 28 сентября 2025 г. и 11 октября 2025 г.."
+      }
+    },
+    {
+      "date": "2025-10-01",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "国庆节、中秋节",
+        "en": "National Day / Mid-Autumn Festival",
+        "ru": "Национальный праздник / Праздник середины осени"
+      },
+      "source_line": {
+        "zh-CN": "六、国庆节、中秋节： 10月1日（周三）至8日（周三）放假调休，共8天。9月28日（周日）、10月11日（周六）上班。",
+        "en": "National Day / Mid-Autumn Festival: holiday from Oct 1, 2025 to Oct 8, 2025. Compensated working day(s): Sep 28, 2025, and Oct 11, 2025.",
+        "ru": "Национальный праздник / Праздник середины осени: выходные с 1 октября 2025 г. по 8 октября 2025 г.. Компенсационные рабочие дни: 28 сентября 2025 г. и 11 октября 2025 г.."
+      }
+    },
+    {
+      "date": "2025-10-02",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "国庆节、中秋节",
+        "en": "National Day / Mid-Autumn Festival",
+        "ru": "Национальный праздник / Праздник середины осени"
+      },
+      "source_line": {
+        "zh-CN": "六、国庆节、中秋节： 10月1日（周三）至8日（周三）放假调休，共8天。9月28日（周日）、10月11日（周六）上班。",
+        "en": "National Day / Mid-Autumn Festival: holiday from Oct 1, 2025 to Oct 8, 2025. Compensated working day(s): Sep 28, 2025, and Oct 11, 2025.",
+        "ru": "Национальный праздник / Праздник середины осени: выходные с 1 октября 2025 г. по 8 октября 2025 г.. Компенсационные рабочие дни: 28 сентября 2025 г. и 11 октября 2025 г.."
+      }
+    },
+    {
+      "date": "2025-10-03",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "国庆节、中秋节",
+        "en": "National Day / Mid-Autumn Festival",
+        "ru": "Национальный праздник / Праздник середины осени"
+      },
+      "source_line": {
+        "zh-CN": "六、国庆节、中秋节： 10月1日（周三）至8日（周三）放假调休，共8天。9月28日（周日）、10月11日（周六）上班。",
+        "en": "National Day / Mid-Autumn Festival: holiday from Oct 1, 2025 to Oct 8, 2025. Compensated working day(s): Sep 28, 2025, and Oct 11, 2025.",
+        "ru": "Национальный праздник / Праздник середины осени: выходные с 1 октября 2025 г. по 8 октября 2025 г.. Компенсационные рабочие дни: 28 сентября 2025 г. и 11 октября 2025 г.."
+      }
+    },
+    {
+      "date": "2025-10-04",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "国庆节、中秋节",
+        "en": "National Day / Mid-Autumn Festival",
+        "ru": "Национальный праздник / Праздник середины осени"
+      },
+      "source_line": {
+        "zh-CN": "六、国庆节、中秋节： 10月1日（周三）至8日（周三）放假调休，共8天。9月28日（周日）、10月11日（周六）上班。",
+        "en": "National Day / Mid-Autumn Festival: holiday from Oct 1, 2025 to Oct 8, 2025. Compensated working day(s): Sep 28, 2025, and Oct 11, 2025.",
+        "ru": "Национальный праздник / Праздник середины осени: выходные с 1 октября 2025 г. по 8 октября 2025 г.. Компенсационные рабочие дни: 28 сентября 2025 г. и 11 октября 2025 г.."
+      }
+    },
+    {
+      "date": "2025-10-05",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "国庆节、中秋节",
+        "en": "National Day / Mid-Autumn Festival",
+        "ru": "Национальный праздник / Праздник середины осени"
+      },
+      "source_line": {
+        "zh-CN": "六、国庆节、中秋节： 10月1日（周三）至8日（周三）放假调休，共8天。9月28日（周日）、10月11日（周六）上班。",
+        "en": "National Day / Mid-Autumn Festival: holiday from Oct 1, 2025 to Oct 8, 2025. Compensated working day(s): Sep 28, 2025, and Oct 11, 2025.",
+        "ru": "Национальный праздник / Праздник середины осени: выходные с 1 октября 2025 г. по 8 октября 2025 г.. Компенсационные рабочие дни: 28 сентября 2025 г. и 11 октября 2025 г.."
+      }
+    },
+    {
+      "date": "2025-10-06",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "国庆节、中秋节",
+        "en": "National Day / Mid-Autumn Festival",
+        "ru": "Национальный праздник / Праздник середины осени"
+      },
+      "source_line": {
+        "zh-CN": "六、国庆节、中秋节： 10月1日（周三）至8日（周三）放假调休，共8天。9月28日（周日）、10月11日（周六）上班。",
+        "en": "National Day / Mid-Autumn Festival: holiday from Oct 1, 2025 to Oct 8, 2025. Compensated working day(s): Sep 28, 2025, and Oct 11, 2025.",
+        "ru": "Национальный праздник / Праздник середины осени: выходные с 1 октября 2025 г. по 8 октября 2025 г.. Компенсационные рабочие дни: 28 сентября 2025 г. и 11 октября 2025 г.."
+      }
+    },
+    {
+      "date": "2025-10-07",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "国庆节、中秋节",
+        "en": "National Day / Mid-Autumn Festival",
+        "ru": "Национальный праздник / Праздник середины осени"
+      },
+      "source_line": {
+        "zh-CN": "六、国庆节、中秋节： 10月1日（周三）至8日（周三）放假调休，共8天。9月28日（周日）、10月11日（周六）上班。",
+        "en": "National Day / Mid-Autumn Festival: holiday from Oct 1, 2025 to Oct 8, 2025. Compensated working day(s): Sep 28, 2025, and Oct 11, 2025.",
+        "ru": "Национальный праздник / Праздник середины осени: выходные с 1 октября 2025 г. по 8 октября 2025 г.. Компенсационные рабочие дни: 28 сентября 2025 г. и 11 октября 2025 г.."
+      }
+    },
+    {
+      "date": "2025-10-08",
+      "type": "holiday",
+      "name": {
+        "zh-CN": "国庆节、中秋节",
+        "en": "National Day / Mid-Autumn Festival",
+        "ru": "Национальный праздник / Праздник середины осени"
+      },
+      "source_line": {
+        "zh-CN": "六、国庆节、中秋节： 10月1日（周三）至8日（周三）放假调休，共8天。9月28日（周日）、10月11日（周六）上班。",
+        "en": "National Day / Mid-Autumn Festival: holiday from Oct 1, 2025 to Oct 8, 2025. Compensated working day(s): Sep 28, 2025, and Oct 11, 2025.",
+        "ru": "Национальный праздник / Праздник середины осени: выходные с 1 октября 2025 г. по 8 октября 2025 г.. Компенсационные рабочие дни: 28 сентября 2025 г. и 11 октября 2025 г.."
+      }
+    },
+    {
+      "date": "2025-10-11",
+      "type": "compensated_working_day",
+      "name": {
+        "zh-CN": "国庆节、中秋节",
+        "en": "National Day / Mid-Autumn Festival",
+        "ru": "Национальный праздник / Праздник середины осени"
+      },
+      "source_line": {
+        "zh-CN": "六、国庆节、中秋节： 10月1日（周三）至8日（周三）放假调休，共8天。9月28日（周日）、10月11日（周六）上班。",
+        "en": "National Day / Mid-Autumn Festival: holiday from Oct 1, 2025 to Oct 8, 2025. Compensated working day(s): Sep 28, 2025, and Oct 11, 2025.",
+        "ru": "Национальный праздник / Праздник середины осени: выходные с 1 октября 2025 г. по 8 октября 2025 г.. Компенсационные рабочие дни: 28 сентября 2025 г. и 11 октября 2025 г.."
+      }
+    }
+  ]
+}
