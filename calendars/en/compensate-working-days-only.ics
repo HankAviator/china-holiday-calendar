@@ -1,186 +1,186 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//china-holiday-calendar//EN
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:China Compensated Working Days 2025-2026
-BEGIN:VEVENT
-UID:e5cfc42a891052f585b0dfc0@china-holiday-calendar
-DTSTAMP:20260504T030931Z
-DTSTART;VALUE=DATE:20250126
-DTEND;VALUE=DATE:20250127
-SUMMARY:Spring Festival Compensated Working Day
-DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
- of the State Council Notice on the 2025 Public Holiday Arrangements\nRele
- vant announcement line: Spring Festival: holiday from Jan 28\, 2025 to Fe
- b 4\, 2025. Compensated working day(s): Jan 26\, 2025\, and Feb 8\, 2025.
- \nOriginal Chinese line: 二、春节： 1月28日（农历除夕、周
- 二）至2月4日（农历正月初七、周二）放假调休，共8天
- 。1月26日（周日）、2月8日（周六）上班。\nSource URL: htt
- ps://www.gov.cn/zhengce/zhengceku/202411/content_6986383.htm\nPublished: 
- 2024-11-12
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:609aa902ffdaf5bbff39043f@china-holiday-calendar
-DTSTAMP:20260504T030931Z
-DTSTART;VALUE=DATE:20250208
-DTEND;VALUE=DATE:20250209
-SUMMARY:Spring Festival Compensated Working Day
-DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
- of the State Council Notice on the 2025 Public Holiday Arrangements\nRele
- vant announcement line: Spring Festival: holiday from Jan 28\, 2025 to Fe
- b 4\, 2025. Compensated working day(s): Jan 26\, 2025\, and Feb 8\, 2025.
- \nOriginal Chinese line: 二、春节： 1月28日（农历除夕、周
- 二）至2月4日（农历正月初七、周二）放假调休，共8天
- 。1月26日（周日）、2月8日（周六）上班。\nSource URL: htt
- ps://www.gov.cn/zhengce/zhengceku/202411/content_6986383.htm\nPublished: 
- 2024-11-12
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:76088dbffbf573f68e6cbe94@china-holiday-calendar
-DTSTAMP:20260504T030931Z
-DTSTART;VALUE=DATE:20250427
-DTEND;VALUE=DATE:20250428
-SUMMARY:Labour Day Compensated Working Day
-DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
- of the State Council Notice on the 2025 Public Holiday Arrangements\nRele
- vant announcement line: Labour Day: holiday from May 1\, 2025 to May 5\, 
- 2025. Compensated working day(s): Apr 27\, 2025.\nOriginal Chinese line: 
- 四、劳动节： 5月1日（周四）至5日（周一）放假调休，
- 共5天。4月27日（周日）上班。\nSource URL: https://www.gov.cn/
- zhengce/zhengceku/202411/content_6986383.htm\nPublished: 2024-11-12
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:1df3a722f0e74e91ffbc88e8@china-holiday-calendar
-DTSTAMP:20260504T030931Z
-DTSTART;VALUE=DATE:20250928
-DTEND;VALUE=DATE:20250929
-SUMMARY:National Day / Mid-Autumn Festival Compensated Working Day
-DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
- of the State Council Notice on the 2025 Public Holiday Arrangements\nRele
- vant announcement line: National Day / Mid-Autumn Festival: holiday from 
- Oct 1\, 2025 to Oct 8\, 2025. Compensated working day(s): Sep 28\, 2025\,
-  and Oct 11\, 2025.\nOriginal Chinese line: 六、国庆节、中秋节
- ： 10月1日（周三）至8日（周三）放假调休，共8天。9月
- 28日（周日）、10月11日（周六）上班。\nSource URL: https://
- www.gov.cn/zhengce/zhengceku/202411/content_6986383.htm\nPublished: 2024-
- 11-12
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:1a8e38b6200222e599da9a0a@china-holiday-calendar
-DTSTAMP:20260504T030931Z
-DTSTART;VALUE=DATE:20251011
-DTEND;VALUE=DATE:20251012
-SUMMARY:National Day / Mid-Autumn Festival Compensated Working Day
-DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
- of the State Council Notice on the 2025 Public Holiday Arrangements\nRele
- vant announcement line: National Day / Mid-Autumn Festival: holiday from 
- Oct 1\, 2025 to Oct 8\, 2025. Compensated working day(s): Sep 28\, 2025\,
-  and Oct 11\, 2025.\nOriginal Chinese line: 六、国庆节、中秋节
- ： 10月1日（周三）至8日（周三）放假调休，共8天。9月
- 28日（周日）、10月11日（周六）上班。\nSource URL: https://
- www.gov.cn/zhengce/zhengceku/202411/content_6986383.htm\nPublished: 2024-
- 11-12
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:1cb6a399d97fedbaf6691a96@china-holiday-calendar
-DTSTAMP:20260504T030931Z
-DTSTART;VALUE=DATE:20260104
-DTEND;VALUE=DATE:20260105
-SUMMARY:New Year's Day Compensated Working Day
-DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
- of the State Council Notice on the 2026 Public Holiday Arrangements\nRele
- vant announcement line: New Year's Day: holiday from Jan 1\, 2026 to Jan 
- 3\, 2026. Compensated working day(s): Jan 4\, 2026.\nOriginal Chinese lin
- e: 一、元旦： 1月1日（周四）至3日（周六）放假调休，
- 共3天。1月4日（周日）上班。\nSource URL: https://www.gov.cn/z
- hengce/zhengceku/202511/content_7047091.htm\nPublished: 2025-11-04
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:48e560692c563953dc46e5b4@china-holiday-calendar
-DTSTAMP:20260504T030931Z
-DTSTART;VALUE=DATE:20260214
-DTEND;VALUE=DATE:20260215
-SUMMARY:Spring Festival Compensated Working Day
-DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
- of the State Council Notice on the 2026 Public Holiday Arrangements\nRele
- vant announcement line: Spring Festival: holiday from Feb 15\, 2026 to Fe
- b 23\, 2026. Compensated working day(s): Feb 14\, 2026\, and Feb 28\, 202
- 6.\nOriginal Chinese line: 二、春节： 2月15日（农历腊月二十
- 八、周日）至23日（农历正月初七、周一）放假调休，
- 共9天。2月14日（周六）、2月28日（周六）上班。\nSource 
- URL: https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm\nPub
- lished: 2025-11-04
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:32b3e93c2519b790a3a3b884@china-holiday-calendar
-DTSTAMP:20260504T030931Z
-DTSTART;VALUE=DATE:20260228
-DTEND;VALUE=DATE:20260301
-SUMMARY:Spring Festival Compensated Working Day
-DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
- of the State Council Notice on the 2026 Public Holiday Arrangements\nRele
- vant announcement line: Spring Festival: holiday from Feb 15\, 2026 to Fe
- b 23\, 2026. Compensated working day(s): Feb 14\, 2026\, and Feb 28\, 202
- 6.\nOriginal Chinese line: 二、春节： 2月15日（农历腊月二十
- 八、周日）至23日（农历正月初七、周一）放假调休，
- 共9天。2月14日（周六）、2月28日（周六）上班。\nSource 
- URL: https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm\nPub
- lished: 2025-11-04
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:51a666181149a3fa3352015e@china-holiday-calendar
-DTSTAMP:20260504T030931Z
-DTSTART;VALUE=DATE:20260509
-DTEND;VALUE=DATE:20260510
-SUMMARY:Labour Day Compensated Working Day
-DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
- of the State Council Notice on the 2026 Public Holiday Arrangements\nRele
- vant announcement line: Labour Day: holiday from May 1\, 2026 to May 5\, 
- 2026. Compensated working day(s): May 9\, 2026.\nOriginal Chinese line: 
- 四、劳动节： 5月1日（周五）至5日（周二）放假调休，
- 共5天。5月9日（周六）上班。\nSource URL: https://www.gov.cn/z
- hengce/zhengceku/202511/content_7047091.htm\nPublished: 2025-11-04
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:f10bc3acc7cf1fac7a2b2471@china-holiday-calendar
-DTSTAMP:20260504T030931Z
-DTSTART;VALUE=DATE:20260920
-DTEND;VALUE=DATE:20260921
-SUMMARY:National Day Compensated Working Day
-DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
- of the State Council Notice on the 2026 Public Holiday Arrangements\nRele
- vant announcement line: National Day: holiday from Oct 1\, 2026 to Oct 7\
- , 2026. Compensated working day(s): Sep 20\, 2026\, and Oct 10\, 2026.\nO
- riginal Chinese line: 七、国庆节： 10月1日（周四）至7日（
- 周三）放假调休，共7天。9月20日（周日）、10月10日（
- 周六）上班。\nSource URL: https://www.gov.cn/zhengce/zhengceku/2025
- 11/content_7047091.htm\nPublished: 2025-11-04
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:3fbfd5f4f345e30764480771@china-holiday-calendar
-DTSTAMP:20260504T030931Z
-DTSTART;VALUE=DATE:20261010
-DTEND;VALUE=DATE:20261011
-SUMMARY:National Day Compensated Working Day
-DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
- of the State Council Notice on the 2026 Public Holiday Arrangements\nRele
- vant announcement line: National Day: holiday from Oct 1\, 2026 to Oct 7\
- , 2026. Compensated working day(s): Sep 20\, 2026\, and Oct 10\, 2026.\nO
- riginal Chinese line: 七、国庆节： 10月1日（周四）至7日（
- 周三）放假调休，共7天。9月20日（周日）、10月10日（
- 周六）上班。\nSource URL: https://www.gov.cn/zhengce/zhengceku/2025
- 11/content_7047091.htm\nPublished: 2025-11-04
-TRANSP:TRANSPARENT
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//china-holiday-calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:China Compensated Working Days 2025-2026
+BEGIN:VEVENT
+UID:e5cfc42a891052f585b0dfc0@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20250126
+DTEND;VALUE=DATE:20250127
+SUMMARY:Spring Festival Compensated Working Day
+DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
+ of the State Council Notice on the 2025 Public Holiday Arrangements\nRele
+ vant announcement line: Spring Festival: holiday from Jan 28\, 2025 to Fe
+ b 4\, 2025. Compensated working day(s): Jan 26\, 2025\, and Feb 8\, 2025.
+ \nOriginal Chinese line: 二、春节： 1月28日（农历除夕、周
+ 二）至2月4日（农历正月初七、周二）放假调休，共8天
+ 。1月26日（周日）、2月8日（周六）上班。\nSource URL: htt
+ ps://www.gov.cn/zhengce/zhengceku/202411/content_6986383.htm\nPublished: 
+ 2024-11-12
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:609aa902ffdaf5bbff39043f@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20250208
+DTEND;VALUE=DATE:20250209
+SUMMARY:Spring Festival Compensated Working Day
+DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
+ of the State Council Notice on the 2025 Public Holiday Arrangements\nRele
+ vant announcement line: Spring Festival: holiday from Jan 28\, 2025 to Fe
+ b 4\, 2025. Compensated working day(s): Jan 26\, 2025\, and Feb 8\, 2025.
+ \nOriginal Chinese line: 二、春节： 1月28日（农历除夕、周
+ 二）至2月4日（农历正月初七、周二）放假调休，共8天
+ 。1月26日（周日）、2月8日（周六）上班。\nSource URL: htt
+ ps://www.gov.cn/zhengce/zhengceku/202411/content_6986383.htm\nPublished: 
+ 2024-11-12
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:76088dbffbf573f68e6cbe94@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20250427
+DTEND;VALUE=DATE:20250428
+SUMMARY:Labour Day Compensated Working Day
+DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
+ of the State Council Notice on the 2025 Public Holiday Arrangements\nRele
+ vant announcement line: Labour Day: holiday from May 1\, 2025 to May 5\, 
+ 2025. Compensated working day(s): Apr 27\, 2025.\nOriginal Chinese line: 
+ 四、劳动节： 5月1日（周四）至5日（周一）放假调休，
+ 共5天。4月27日（周日）上班。\nSource URL: https://www.gov.cn/
+ zhengce/zhengceku/202411/content_6986383.htm\nPublished: 2024-11-12
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:1df3a722f0e74e91ffbc88e8@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20250928
+DTEND;VALUE=DATE:20250929
+SUMMARY:National Day / Mid-Autumn Festival Compensated Working Day
+DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
+ of the State Council Notice on the 2025 Public Holiday Arrangements\nRele
+ vant announcement line: National Day / Mid-Autumn Festival: holiday from 
+ Oct 1\, 2025 to Oct 8\, 2025. Compensated working day(s): Sep 28\, 2025\,
+  and Oct 11\, 2025.\nOriginal Chinese line: 六、国庆节、中秋节
+ ： 10月1日（周三）至8日（周三）放假调休，共8天。9月
+ 28日（周日）、10月11日（周六）上班。\nSource URL: https://
+ www.gov.cn/zhengce/zhengceku/202411/content_6986383.htm\nPublished: 2024-
+ 11-12
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:1a8e38b6200222e599da9a0a@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20251011
+DTEND;VALUE=DATE:20251012
+SUMMARY:National Day / Mid-Autumn Festival Compensated Working Day
+DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
+ of the State Council Notice on the 2025 Public Holiday Arrangements\nRele
+ vant announcement line: National Day / Mid-Autumn Festival: holiday from 
+ Oct 1\, 2025 to Oct 8\, 2025. Compensated working day(s): Sep 28\, 2025\,
+  and Oct 11\, 2025.\nOriginal Chinese line: 六、国庆节、中秋节
+ ： 10月1日（周三）至8日（周三）放假调休，共8天。9月
+ 28日（周日）、10月11日（周六）上班。\nSource URL: https://
+ www.gov.cn/zhengce/zhengceku/202411/content_6986383.htm\nPublished: 2024-
+ 11-12
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:1cb6a399d97fedbaf6691a96@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20260104
+DTEND;VALUE=DATE:20260105
+SUMMARY:New Year's Day Compensated Working Day
+DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
+ of the State Council Notice on the 2026 Public Holiday Arrangements\nRele
+ vant announcement line: New Year's Day: holiday from Jan 1\, 2026 to Jan 
+ 3\, 2026. Compensated working day(s): Jan 4\, 2026.\nOriginal Chinese lin
+ e: 一、元旦： 1月1日（周四）至3日（周六）放假调休，
+ 共3天。1月4日（周日）上班。\nSource URL: https://www.gov.cn/z
+ hengce/zhengceku/202511/content_7047091.htm\nPublished: 2025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:48e560692c563953dc46e5b4@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20260214
+DTEND;VALUE=DATE:20260215
+SUMMARY:Spring Festival Compensated Working Day
+DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
+ of the State Council Notice on the 2026 Public Holiday Arrangements\nRele
+ vant announcement line: Spring Festival: holiday from Feb 15\, 2026 to Fe
+ b 23\, 2026. Compensated working day(s): Feb 14\, 2026\, and Feb 28\, 202
+ 6.\nOriginal Chinese line: 二、春节： 2月15日（农历腊月二十
+ 八、周日）至23日（农历正月初七、周一）放假调休，
+ 共9天。2月14日（周六）、2月28日（周六）上班。\nSource 
+ URL: https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm\nPub
+ lished: 2025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:32b3e93c2519b790a3a3b884@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20260228
+DTEND;VALUE=DATE:20260301
+SUMMARY:Spring Festival Compensated Working Day
+DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
+ of the State Council Notice on the 2026 Public Holiday Arrangements\nRele
+ vant announcement line: Spring Festival: holiday from Feb 15\, 2026 to Fe
+ b 23\, 2026. Compensated working day(s): Feb 14\, 2026\, and Feb 28\, 202
+ 6.\nOriginal Chinese line: 二、春节： 2月15日（农历腊月二十
+ 八、周日）至23日（农历正月初七、周一）放假调休，
+ 共9天。2月14日（周六）、2月28日（周六）上班。\nSource 
+ URL: https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm\nPub
+ lished: 2025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:51a666181149a3fa3352015e@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20260509
+DTEND;VALUE=DATE:20260510
+SUMMARY:Labour Day Compensated Working Day
+DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
+ of the State Council Notice on the 2026 Public Holiday Arrangements\nRele
+ vant announcement line: Labour Day: holiday from May 1\, 2026 to May 5\, 
+ 2026. Compensated working day(s): May 9\, 2026.\nOriginal Chinese line: 
+ 四、劳动节： 5月1日（周五）至5日（周二）放假调休，
+ 共5天。5月9日（周六）上班。\nSource URL: https://www.gov.cn/z
+ hengce/zhengceku/202511/content_7047091.htm\nPublished: 2025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:f10bc3acc7cf1fac7a2b2471@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20260920
+DTEND;VALUE=DATE:20260921
+SUMMARY:National Day Compensated Working Day
+DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
+ of the State Council Notice on the 2026 Public Holiday Arrangements\nRele
+ vant announcement line: National Day: holiday from Oct 1\, 2026 to Oct 7\
+ , 2026. Compensated working day(s): Sep 20\, 2026\, and Oct 10\, 2026.\nO
+ riginal Chinese line: 七、国庆节： 10月1日（周四）至7日（
+ 周三）放假调休，共7天。9月20日（周日）、10月10日（
+ 周六）上班。\nSource URL: https://www.gov.cn/zhengce/zhengceku/2025
+ 11/content_7047091.htm\nPublished: 2025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:3fbfd5f4f345e30764480771@china-holiday-calendar
+DTSTAMP:20260504T030931Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261011
+SUMMARY:National Day Compensated Working Day
+DESCRIPTION:Type: Compensated working day\nSource notice: General Office 
+ of the State Council Notice on the 2026 Public Holiday Arrangements\nRele
+ vant announcement line: National Day: holiday from Oct 1\, 2026 to Oct 7\
+ , 2026. Compensated working day(s): Sep 20\, 2026\, and Oct 10\, 2026.\nO
+ riginal Chinese line: 七、国庆节： 10月1日（周四）至7日（
+ 周三）放假调休，共7天。9月20日（周日）、10月10日（
+ 周六）上班。\nSource URL: https://www.gov.cn/zhengce/zhengceku/2025
+ 11/content_7047091.htm\nPublished: 2025-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

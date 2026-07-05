@@ -644,7 +644,7 @@ def write_ics_file(
 
     lines.append("END:VCALENDAR")
     content = "\r\n".join(fold_ics_line(line) for line in lines) + "\r\n"
-    path.write_text(content, encoding="utf-8")
+    path.write_bytes(content.encode("utf-8"))
 
 
 def write_metadata(
