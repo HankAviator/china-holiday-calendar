@@ -28,12 +28,17 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v5
 
+      - name: Configure Git safe directory
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
       - name: Generate calendars
         run: PYTHONPATH=src python -m china_holiday_calendar
 
       - name: Commit updated feeds
         run: |
-          if [ -z "$(git status --porcelain calendars data)" ]; then
+          set -Eeuo pipefail
+          status="$(git status --porcelain calendars data)"
+          if [ -z "$status" ]; then
             echo "No generated feed changes detected."
             exit 0
           fi
