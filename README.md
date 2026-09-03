@@ -61,9 +61,9 @@ Each generated feed:
 - automatically rechecks the rolling three-year window
 - merges consecutive holiday dates into a single arrangement range
 - preserves compensated working days separately
-- is regenerated every 5 minutes by GitHub Actions
+- is regenerated every 3 hours by GitHub Actions
 
-GitHub Actions runs inside a prebuilt GitHub Container Registry image with Python, Playwright, and Chromium already installed. The workflows also cancel superseded runs and enforce a 10-minute timeout.
+GitHub Actions runs inside a prebuilt GitHub Container Registry image with Python, Playwright, and Chromium already installed. The workflows serialize scheduled updates and enforce a 10-minute timeout.
 
 ## Local usage
 
