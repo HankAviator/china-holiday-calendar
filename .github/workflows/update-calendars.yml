@@ -35,6 +35,7 @@ jobs:
         run: PYTHONPATH=src python -m china_holiday_calendar
 
       - name: Commit updated feeds
+        shell: bash
         run: |
           set -Eeuo pipefail
           status="$(git status --porcelain calendars data)"
