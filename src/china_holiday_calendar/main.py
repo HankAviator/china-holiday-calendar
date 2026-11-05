@@ -30,6 +30,7 @@ NOTICE_TITLE_TEMPLATE_RU = (
 KNOWN_NOTICE_URL_CATALOG = {
     2025: "https://www.gov.cn/zhengce/zhengceku/202411/content_6986383.htm",
     2026: "https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm",
+    2027: "https://www.gov.cn/zhengce/content/202611/content_7085101.htm",
 }
 _RUNTIME_YEAR = datetime.now(timezone.utc).year
 KNOWN_NOTICE_URLS = {
@@ -84,9 +85,7 @@ PUBLISHED_RE = re.compile(r"发布日期[:：]\s*(\d{4})年(\d{1,2})月(\d{1,2})
 class NoticeLine:
     ordinal_zh: str
     holiday_name_zh: str
-    holiday_name_en: str
     line_zh: str
-    line_en: str
     holiday_dates: tuple[date, ...]
     workday_dates: tuple[date, ...]
 
@@ -95,7 +94,6 @@ class NoticeLine:
 class Notice:
     holiday_year: int
     title_zh: str
-    title_en: str
     source_url: str
     published_at: date
     lines: tuple[NoticeLine, ...]
@@ -230,12 +228,12 @@ def discover_notice_urls_with_bing_html(session: requests.Session, query: str) -
     candidates: list[str] = []
     for anchor in soup.select("main a[href], #b_results a[href]"):
         href = anchor.get("href", "")
-        if href.startswith("https://www.gov.cn/zhengce/zhengceku/") and "content_" in href:
+        if re.match(r"^https://www\.gov\.cn/zhengce/(?:zhengceku|content)/\d+/content_\d+\.htm(?:[?#].*)?$", href):
             candidates.append(href)
 
     if not candidates:
         candidates = re.findall(
-            r"https://www\.gov\.cn/zhengce/zhengceku/\d+/content_\d+\.htm",
+            r"https://www\.gov\.cn/zhengce/(?:zhengceku|content)/\d+/content_\d+\.htm",
             response.text,
         )
 
@@ -253,7 +251,9 @@ def discover_notice_urls_with_playwright(query: str) -> list[str]:
             page.wait_for_timeout(1500)
             urls = page.locator(
                 "main a[href^='https://www.gov.cn/zhengce/zhengceku/'][href*='content_'], "
-                "#b_results a[href^='https://www.gov.cn/zhengce/zhengceku/'][href*='content_']"
+                "#b_results a[href^='https://www.gov.cn/zhengce/zhengceku/'][href*='content_'], "
+                "main a[href^='https://www.gov.cn/zhengce/content/'][href*='content_'], "
+                "#b_results a[href^='https://www.gov.cn/zhengce/content/'][href*='content_']"
             ).evaluate_all("elements => elements.map(element => element.href)")
             return dedupe(urls)
         except PlaywrightTimeoutError as exc:
@@ -285,7 +285,6 @@ def parse_notice_page(session: requests.Session, url: str, holiday_year: int | N
 
     resolved_year = holiday_year or infer_holiday_year_from_page(soup)
     title_zh = NOTICE_TITLE_TEMPLATE_ZH.format(year=resolved_year)
-    title_en = NOTICE_TITLE_TEMPLATE_EN.format(year=resolved_year)
     published_at = parse_published_date(soup)
     content_root = find_content_root(soup)
     paragraphs = [
@@ -305,7 +304,6 @@ def parse_notice_page(session: requests.Session, url: str, holiday_year: int | N
     return Notice(
         holiday_year=resolved_year,
         title_zh=title_zh,
-        title_en=title_en,
         source_url=url,
         published_at=published_at,
         lines=lines,
@@ -350,15 +348,10 @@ def parse_notice_line(line_zh: str, holiday_year: int, index: int) -> NoticeLine
     body_zh = normalize_text(match.group("body"))
     holiday_dates = tuple(parse_holiday_dates(body_zh, holiday_year, holiday_name_zh, index))
     workday_dates = tuple(parse_workday_dates(body_zh, holiday_year, holiday_name_zh, index))
-    holiday_name_en = translate_holiday_name(holiday_name_zh)
-    line_en = build_english_line(holiday_name_en, holiday_dates, workday_dates)
-
     return NoticeLine(
         ordinal_zh=match.group("ordinal"),
         holiday_name_zh=holiday_name_zh,
-        holiday_name_en=holiday_name_en,
         line_zh=line_zh,
-        line_en=line_en,
         holiday_dates=holiday_dates,
         workday_dates=workday_dates,
     )
@@ -425,14 +418,11 @@ def infer_year(month: int, holiday_year: int, holiday_name_zh: str, index: int) 
     return holiday_year
 
 
-def build_english_line(
-    holiday_name_en: str,
-    holiday_dates: Sequence[date],
-    workday_dates: Sequence[date],
-) -> str:
-    parts = [f"{holiday_name_en}: {describe_holiday_dates_en(holiday_dates)}."]
-    if workday_dates:
-        parts.append(f"Compensated working day(s): {describe_date_ranges_en(workday_dates)}.")
+def build_english_line(line: NoticeLine) -> str:
+    name = translate_holiday_name(line.holiday_name_zh, "en")
+    parts = [f"{name}: {describe_holiday_dates_en(line.holiday_dates)}."]
+    if line.workday_dates:
+        parts.append(f"Compensated working day(s): {describe_date_ranges_en(line.workday_dates)}.")
     return " ".join(parts)
 
 
@@ -456,20 +446,10 @@ def describe_merged_ranges_en(ranges: Sequence[tuple[date, date]]) -> str:
     return ", ".join(pieces[:-1]) + f", and {pieces[-1]}"
 
 
-def translate_holiday_name(holiday_name_zh: str) -> str:
+def translate_holiday_name(holiday_name_zh: str, language: str) -> str:
     pieces = re.split(r"[、，,/]", holiday_name_zh)
     translated = [
-        HOLIDAY_NAME_TRANSLATIONS["en"].get(piece.strip(), piece.strip())
-        for piece in pieces
-        if piece.strip()
-    ]
-    return " / ".join(translated)
-
-
-def translate_holiday_name_ru(holiday_name_zh: str) -> str:
-    pieces = re.split(r"[、，,/]", holiday_name_zh)
-    translated = [
-        HOLIDAY_NAME_TRANSLATIONS["ru"].get(piece.strip(), piece.strip())
+        HOLIDAY_NAME_TRANSLATIONS[language].get(piece.strip(), piece.strip())
         for piece in pieces
         if piece.strip()
     ]
@@ -540,14 +520,14 @@ def build_summary(line: NoticeLine, language: str, event_type: str) -> str:
         return f"{line.holiday_name_zh} 调休上班"
 
     if language == "ru":
-        holiday_name_ru = translate_holiday_name_ru(line.holiday_name_zh)
+        holiday_name_ru = translate_holiday_name(line.holiday_name_zh, "ru")
         if event_type == "holiday":
             return holiday_name_ru
         return f"{holiday_name_ru} Компенсационный рабочий день"
 
     if event_type == "holiday":
-        return line.holiday_name_en
-    return f"{line.holiday_name_en} Compensated Working Day"
+        return translate_holiday_name(line.holiday_name_zh, "en")
+    return f"{translate_holiday_name(line.holiday_name_zh, 'en')} Compensated Working Day"
 
 
 def build_description(notice: Notice, line: NoticeLine, language: str, event_type: str) -> str:
@@ -574,8 +554,8 @@ def build_description(notice: Notice, line: NoticeLine, language: str, event_typ
 
     description_lines = [
         f"Type: {'Holiday' if event_type == 'holiday' else 'Compensated working day'}",
-        f"Source notice: {notice.title_en}",
-        f"Relevant announcement line: {line.line_en}",
+        f"Source notice: {NOTICE_TITLE_TEMPLATE_EN.format(year=notice.holiday_year)}",
+        f"Relevant announcement line: {build_english_line(line)}",
         f"Original Chinese line: {line.line_zh}",
         f"Source URL: {notice.source_url}",
         f"Published: {notice.published_at.isoformat()}",
@@ -664,15 +644,15 @@ def write_metadata(
             {
                 "holiday_year": notice.holiday_year,
                 "title_zh": notice.title_zh,
-                "title_en": notice.title_en,
+                "title_en": NOTICE_TITLE_TEMPLATE_EN.format(year=notice.holiday_year),
                 "source_url": notice.source_url,
                 "published_at": notice.published_at.isoformat(),
                 "holiday_lines": [
                     {
                         "holiday_name_zh": line.holiday_name_zh,
-                        "holiday_name_en": line.holiday_name_en,
+                        "holiday_name_en": translate_holiday_name(line.holiday_name_zh, "en"),
                         "line_zh": line.line_zh,
-                        "line_en": line.line_en,
+                        "line_en": build_english_line(line),
                         "holiday_dates": [value.isoformat() for value in line.holiday_dates],
                         "workday_dates": [value.isoformat() for value in line.workday_dates],
                     }
@@ -781,7 +761,7 @@ def build_json_source_payload(
     if language is None:
         title: str | dict[str, str] = {
             "zh-CN": notice.title_zh,
-            "en": notice.title_en,
+            "en": NOTICE_TITLE_TEMPLATE_EN.format(year=notice.holiday_year),
             "ru": NOTICE_TITLE_TEMPLATE_RU.format(year=notice.holiday_year),
         }
     else:
@@ -851,7 +831,7 @@ def build_localized_notice_title(notice: Notice, language: str) -> str:
         return notice.title_zh
     if language == "ru":
         return NOTICE_TITLE_TEMPLATE_RU.format(year=notice.holiday_year)
-    return notice.title_en
+    return NOTICE_TITLE_TEMPLATE_EN.format(year=notice.holiday_year)
 
 
 def build_localized_holiday_name(
@@ -861,32 +841,31 @@ def build_localized_holiday_name(
     if language is None:
         return {
             "zh-CN": line.holiday_name_zh,
-            "en": line.holiday_name_en,
-            "ru": translate_holiday_name_ru(line.holiday_name_zh),
+            "en": translate_holiday_name(line.holiday_name_zh, "en"),
+            "ru": translate_holiday_name(line.holiday_name_zh, "ru"),
         }
     if language == "zh-CN":
         return line.holiday_name_zh
     if language == "ru":
-        return translate_holiday_name_ru(line.holiday_name_zh)
-    return line.holiday_name_en
+        return translate_holiday_name(line.holiday_name_zh, "ru")
+    return translate_holiday_name(line.holiday_name_zh, "en")
 
 
 def build_localized_notice_line(
     line: NoticeLine,
     language: str | None = None,
 ) -> str | dict[str, str]:
-    russian_line = build_russian_line(line)
     if language is None:
         return {
             "zh-CN": line.line_zh,
-            "en": line.line_en,
-            "ru": russian_line,
+            "en": build_english_line(line),
+            "ru": build_russian_line(line),
         }
     if language == "zh-CN":
         return line.line_zh
     if language == "ru":
-        return russian_line
-    return line.line_en
+        return build_russian_line(line)
+    return build_english_line(line)
 
 
 def build_date_strings(dates: Sequence[date]) -> list[str]:
@@ -991,7 +970,7 @@ def describe_merged_ranges_ru(ranges: Sequence[tuple[date, date]]) -> str:
 
 
 def build_russian_line(line: NoticeLine) -> str:
-    holiday_name_ru = translate_holiday_name_ru(line.holiday_name_zh)
+    holiday_name_ru = translate_holiday_name(line.holiday_name_zh, "ru")
     holiday_ranges = merge_consecutive_dates(line.holiday_dates)
     if len(holiday_ranges) == 1 and holiday_ranges[0][0] == holiday_ranges[0][1]:
         holiday_part = f"{holiday_name_ru}: выходной день {format_date_ru(holiday_ranges[0][0])}."

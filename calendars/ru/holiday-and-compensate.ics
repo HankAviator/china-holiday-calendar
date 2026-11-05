@@ -4,10 +4,10 @@ PRODID:-//china-holiday-calendar//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Праздничные и компенсационные р
- абочие дни Китая 2025-2026
+ абочие дни Китая 2025-2027
 BEGIN:VEVENT
 UID:2d37f53481ddb23442f19635@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
 SUMMARY:Новый год
@@ -24,7 +24,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:33a4ee984c1686e61046aa07@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20250126
 DTEND;VALUE=DATE:20250127
 SUMMARY:Праздник весны Компенсационный раб
@@ -46,7 +46,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:09db2439a297a63095460556@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20250128
 DTEND;VALUE=DATE:20250205
 SUMMARY:Праздник весны
@@ -66,7 +66,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:2e98f25bde1e2a1c1466da0b@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20250208
 DTEND;VALUE=DATE:20250209
 SUMMARY:Праздник весны Компенсационный раб
@@ -88,7 +88,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:c5be473e67a8d440786a868e@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20250404
 DTEND;VALUE=DATE:20250407
 SUMMARY:Праздник Цинмин
@@ -106,7 +106,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:1f7558edd3de6bd1cebe4415@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20250427
 DTEND;VALUE=DATE:20250428
 SUMMARY:Праздник труда Компенсационный раб
@@ -126,7 +126,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:be851b49137b92cc3804e70d@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250506
 SUMMARY:Праздник труда
@@ -145,7 +145,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:e6942ea5efca358230dfc38f@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20250531
 DTEND;VALUE=DATE:20250603
 SUMMARY:Праздник драконьих лодок
@@ -163,7 +163,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:169a8631a8b45b328eae5e63@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20250928
 DTEND;VALUE=DATE:20250929
 SUMMARY:Национальный праздник / Праздник се
@@ -186,7 +186,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:4401fb05dbaf74b0f551472d@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20251001
 DTEND;VALUE=DATE:20251009
 SUMMARY:Национальный праздник / Праздник се
@@ -208,7 +208,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:59faa0ec3adafb3f0efe8163@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20251011
 DTEND;VALUE=DATE:20251012
 SUMMARY:Национальный праздник / Праздник се
@@ -231,7 +231,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:aaaf0e1fb2fc0e3020042936@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20260101
 DTEND;VALUE=DATE:20260104
 SUMMARY:Новый год
@@ -250,7 +250,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:5873a8237fd019178042e39c@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20260104
 DTEND;VALUE=DATE:20260105
 SUMMARY:Новый год Компенсационный рабочий 
@@ -270,7 +270,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:e2675cc1e74ffce745cd0703@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20260214
 DTEND;VALUE=DATE:20260215
 SUMMARY:Праздник весны Компенсационный раб
@@ -292,7 +292,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:dd783ab2c1125055dbe23c4e@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20260215
 DTEND;VALUE=DATE:20260224
 SUMMARY:Праздник весны
@@ -313,7 +313,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:136d74e3aab34d8f568c7b0a@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20260228
 DTEND;VALUE=DATE:20260301
 SUMMARY:Праздник весны Компенсационный раб
@@ -335,7 +335,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:c7f0315ba6d5586bc7a33001@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20260404
 DTEND;VALUE=DATE:20260407
 SUMMARY:Праздник Цинмин
@@ -353,7 +353,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:57b672dc36cf60c6b4dd7f95@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20260501
 DTEND;VALUE=DATE:20260506
 SUMMARY:Праздник труда
@@ -372,7 +372,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:c7263c73f76b800053a2c55e@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20260509
 DTEND;VALUE=DATE:20260510
 SUMMARY:Праздник труда Компенсационный раб
@@ -392,7 +392,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:86a9a7e58aeb44a2c4e25c77@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20260619
 DTEND;VALUE=DATE:20260622
 SUMMARY:Праздник драконьих лодок
@@ -410,7 +410,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:6fbeafc9e556470cb2459f15@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20260920
 DTEND;VALUE=DATE:20260921
 SUMMARY:Национальный праздник Компенсацио
@@ -432,7 +432,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:aca2e7e50bbeeeeab02fa1e9@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260928
 SUMMARY:Праздник середины осени
@@ -450,7 +450,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bb6b3110ffa644b39d06545f@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261008
 SUMMARY:Национальный праздник
@@ -470,7 +470,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:1ffbfb9cb6057bba1f87fdaa@china-holiday-calendar
-DTSTAMP:20260504T030931Z
+DTSTAMP:20261105T103024Z
 DTSTART;VALUE=DATE:20261010
 DTEND;VALUE=DATE:20261011
 SUMMARY:Национальный праздник Компенсацио
@@ -488,6 +488,242 @@ DESCRIPTION:Тип: Компенсационный рабочий ден
  （周六）上班。\nURL источника: https://www.gov.cn/zhengce
  /zhengceku/202511/content_7047091.htm\nДата публикации: 202
  5-11-04
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:050055b632bcadd9d8274b14@china-holiday-calendar
+DTSTAMP:20261105T103024Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270104
+SUMMARY:Новый год
+DESCRIPTION:Тип: Праздничный день\nИсточник: У
+ ведомление Канцелярии Госсовета КНР о г
+ рафике части праздничных дней на 2027 год\
+ nСоответствующая строка уведомления: Но
+ вый год: выходные с 1 января 2027 г. по 3 янв
+ аря 2027 г..\nОригинальная китайская строк
+ а: 一、元旦： 1月1日（周五）至3日（周日）放假，共3
+ 天。\nURL источника: https://www.gov.cn/zhengce/content/202611
+ /content_7085101.htm\nДата публикации: 2026-11-05
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:47870acb0d061f2f0f90b779@china-holiday-calendar
+DTSTAMP:20261105T103024Z
+DTSTART;VALUE=DATE:20270131
+DTEND;VALUE=DATE:20270201
+SUMMARY:Праздник весны Компенсационный раб
+ очий день
+DESCRIPTION:Тип: Компенсационный рабочий ден
+ ь\nИсточник: Уведомление Канцелярии Гос
+ совета КНР о графике части праздничных 
+ дней на 2027 год\nСоответствующая строка у
+ ведомления: Праздник весны: выходные с 5 
+ февраля 2027 г. по 13 февраля 2027 г.. Компенса
+ ционные рабочие дни: 31 января 2027 г. и 14 фе
+ враля 2027 г..\nОригинальная китайская стр
+ ока: 二、春节： 2月5日（农历除夕、周五）至13日（农
+ 历正月初八、周六）放假调休，共9天。1月31日（周日）
+ 、2月14日（周日）上班。\nURL источника: https://www.go
+ v.cn/zhengce/content/202611/content_7085101.htm\nДата публика
+ ции: 2026-11-05
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:89e144c00b03310d532d4e54@china-holiday-calendar
+DTSTAMP:20261105T103024Z
+DTSTART;VALUE=DATE:20270205
+DTEND;VALUE=DATE:20270214
+SUMMARY:Праздник весны
+DESCRIPTION:Тип: Праздничный день\nИсточник: У
+ ведомление Канцелярии Госсовета КНР о г
+ рафике части праздничных дней на 2027 год\
+ nСоответствующая строка уведомления: Пр
+ аздник весны: выходные с 5 февраля 2027 г. п
+ о 13 февраля 2027 г.. Компенсационные рабоч
+ ие дни: 31 января 2027 г. и 14 февраля 2027 г..\nО
+ ригинальная китайская строка: 二、春节： 2
+ 月5日（农历除夕、周五）至13日（农历正月初八、周六
+ ）放假调休，共9天。1月31日（周日）、2月14日（周日）
+ 上班。\nURL источника: https://www.gov.cn/zhengce/content/202
+ 611/content_7085101.htm\nДата публикации: 2026-11-05
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:52b20a6fbb35fc9b67751cb7@china-holiday-calendar
+DTSTAMP:20261105T103024Z
+DTSTART;VALUE=DATE:20270214
+DTEND;VALUE=DATE:20270215
+SUMMARY:Праздник весны Компенсационный раб
+ очий день
+DESCRIPTION:Тип: Компенсационный рабочий ден
+ ь\nИсточник: Уведомление Канцелярии Гос
+ совета КНР о графике части праздничных 
+ дней на 2027 год\nСоответствующая строка у
+ ведомления: Праздник весны: выходные с 5 
+ февраля 2027 г. по 13 февраля 2027 г.. Компенса
+ ционные рабочие дни: 31 января 2027 г. и 14 фе
+ враля 2027 г..\nОригинальная китайская стр
+ ока: 二、春节： 2月5日（农历除夕、周五）至13日（农
+ 历正月初八、周六）放假调休，共9天。1月31日（周日）
+ 、2月14日（周日）上班。\nURL источника: https://www.go
+ v.cn/zhengce/content/202611/content_7085101.htm\nДата публика
+ ции: 2026-11-05
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:d40f31d5447c5487e7e6129e@china-holiday-calendar
+DTSTAMP:20261105T103024Z
+DTSTART;VALUE=DATE:20270403
+DTEND;VALUE=DATE:20270406
+SUMMARY:Праздник Цинмин
+DESCRIPTION:Тип: Праздничный день\nИсточник: У
+ ведомление Канцелярии Госсовета КНР о г
+ рафике части праздничных дней на 2027 год\
+ nСоответствующая строка уведомления: Пр
+ аздник Цинмин: выходные с 3 апреля 2027 г. п
+ о 5 апреля 2027 г..\nОригинальная китайская 
+ строка: 三、清明节： 4月3日（周六）至5日（周一）
+ 放假，共3天。\nURL источника: https://www.gov.cn/zhengce/c
+ ontent/202611/content_7085101.htm\nДата публикации: 2026-11
+ -05
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:fc87e5d77ef2052f93c75ce7@china-holiday-calendar
+DTSTAMP:20261105T103024Z
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270506
+SUMMARY:Праздник труда
+DESCRIPTION:Тип: Праздничный день\nИсточник: У
+ ведомление Канцелярии Госсовета КНР о г
+ рафике части праздничных дней на 2027 год\
+ nСоответствующая строка уведомления: Пр
+ аздник труда: выходные с 1 мая 2027 г. по 5 м
+ ая 2027 г.. Компенсационные рабочие дни: 8 м
+ ая 2027 г..\nОригинальная китайская строка:
+  四、劳动节： 5月1日（周六）至5日（周三）放假调休
+ ，共5天。5月8日（周六）上班。\nURL источника: https
+ ://www.gov.cn/zhengce/content/202611/content_7085101.htm\nДата пуб
+ ликации: 2026-11-05
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:79f262dcb2af079abe70e20a@china-holiday-calendar
+DTSTAMP:20261105T103024Z
+DTSTART;VALUE=DATE:20270508
+DTEND;VALUE=DATE:20270509
+SUMMARY:Праздник труда Компенсационный раб
+ очий день
+DESCRIPTION:Тип: Компенсационный рабочий ден
+ ь\nИсточник: Уведомление Канцелярии Гос
+ совета КНР о графике части праздничных 
+ дней на 2027 год\nСоответствующая строка у
+ ведомления: Праздник труда: выходные с 1 
+ мая 2027 г. по 5 мая 2027 г.. Компенсационные р
+ абочие дни: 8 мая 2027 г..\nОригинальная кит
+ айская строка: 四、劳动节： 5月1日（周六）至5日
+ （周三）放假调休，共5天。5月8日（周六）上班。\nURL 
+ источника: https://www.gov.cn/zhengce/content/202611/content_708
+ 5101.htm\nДата публикации: 2026-11-05
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:eb551cac80a3110fd50ff591@china-holiday-calendar
+DTSTAMP:20261105T103024Z
+DTSTART;VALUE=DATE:20270609
+DTEND;VALUE=DATE:20270610
+SUMMARY:Праздник драконьих лодок
+DESCRIPTION:Тип: Праздничный день\nИсточник: У
+ ведомление Канцелярии Госсовета КНР о г
+ рафике части праздничных дней на 2027 год\
+ nСоответствующая строка уведомления: Пр
+ аздник драконьих лодок: выходной день 9 
+ июня 2027 г..\nОригинальная китайская стро
+ ка: 五、端午节： 6月9日（周三）放假，共1天。\nURL и
+ сточника: https://www.gov.cn/zhengce/content/202611/content_70851
+ 01.htm\nДата публикации: 2026-11-05
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:4e2adf43328602f3ccbbbd85@china-holiday-calendar
+DTSTAMP:20261105T103024Z
+DTSTART;VALUE=DATE:20270915
+DTEND;VALUE=DATE:20270916
+SUMMARY:Праздник середины осени
+DESCRIPTION:Тип: Праздничный день\nИсточник: У
+ ведомление Канцелярии Госсовета КНР о г
+ рафике части праздничных дней на 2027 год\
+ nСоответствующая строка уведомления: Пр
+ аздник середины осени: выходной день 15 с
+ ентября 2027 г..\nОригинальная китайская с
+ трока: 六、中秋节： 9月15日（周三）放假，共1天。\n
+ URL источника: https://www.gov.cn/zhengce/content/202611/content
+ _7085101.htm\nДата публикации: 2026-11-05
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:4318879728cb4020d210a6e3@china-holiday-calendar
+DTSTAMP:20261105T103024Z
+DTSTART;VALUE=DATE:20270926
+DTEND;VALUE=DATE:20270927
+SUMMARY:Национальный праздник Компенсацио
+ нный рабочий день
+DESCRIPTION:Тип: Компенсационный рабочий ден
+ ь\nИсточник: Уведомление Канцелярии Гос
+ совета КНР о графике части праздничных 
+ дней на 2027 год\nСоответствующая строка у
+ ведомления: Национальный праздник: выхо
+ дные с 1 октября 2027 г. по 7 октября 2027 г.. К
+ омпенсационные рабочие дни: 26 сентября 2
+ 027 г. и 9 октября 2027 г..\nОригинальная кита
+ йская строка: 七、国庆节： 10月1日（周五）至7日
+ （周四）放假调休，共7天。9月26日（周日）、10月9日（
+ 周六）上班。\nURL источника: https://www.gov.cn/zhengce/co
+ ntent/202611/content_7085101.htm\nДата публикации: 2026-11-
+ 05
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:22e83c682bdb632e7b195b71@china-holiday-calendar
+DTSTAMP:20261105T103024Z
+DTSTART;VALUE=DATE:20271001
+DTEND;VALUE=DATE:20271008
+SUMMARY:Национальный праздник
+DESCRIPTION:Тип: Праздничный день\nИсточник: У
+ ведомление Канцелярии Госсовета КНР о г
+ рафике части праздничных дней на 2027 год\
+ nСоответствующая строка уведомления: На
+ циональный праздник: выходные с 1 октябр
+ я 2027 г. по 7 октября 2027 г.. Компенсационны
+ е рабочие дни: 26 сентября 2027 г. и 9 октябр
+ я 2027 г..\nОригинальная китайская строка: 
+ 七、国庆节： 10月1日（周五）至7日（周四）放假调休
+ ，共7天。9月26日（周日）、10月9日（周六）上班。\nURL 
+ источника: https://www.gov.cn/zhengce/content/202611/content_708
+ 5101.htm\nДата публикации: 2026-11-05
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:8a33f93122c5ead672b1d4b0@china-holiday-calendar
+DTSTAMP:20261105T103024Z
+DTSTART;VALUE=DATE:20271009
+DTEND;VALUE=DATE:20271010
+SUMMARY:Национальный праздник Компенсацио
+ нный рабочий день
+DESCRIPTION:Тип: Компенсационный рабочий ден
+ ь\nИсточник: Уведомление Канцелярии Гос
+ совета КНР о графике части праздничных 
+ дней на 2027 год\nСоответствующая строка у
+ ведомления: Национальный праздник: выхо
+ дные с 1 октября 2027 г. по 7 октября 2027 г.. К
+ омпенсационные рабочие дни: 26 сентября 2
+ 027 г. и 9 октября 2027 г..\nОригинальная кита
+ йская строка: 七、国庆节： 10月1日（周五）至7日
+ （周四）放假调休，共7天。9月26日（周日）、10月9日（
+ 周六）上班。\nURL источника: https://www.gov.cn/zhengce/co
+ ntent/202611/content_7085101.htm\nДата публикации: 2026-11-
+ 05
 TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR

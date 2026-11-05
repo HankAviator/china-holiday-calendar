@@ -1,9 +1,9 @@
 {
   "year_window": {
     "start": 2025,
-    "end": 2026
+    "end": 2027
   },
-  "generated_at": "2026-05-04T03:09:31.917120+00:00",
+  "generated_at": "2026-11-05T10:30:24.979281+00:00",
   "notices": [
     {
       "holiday_year": 2025,
@@ -215,6 +215,115 @@
           "workday_dates": [
             "2026-09-20",
             "2026-10-10"
+          ]
+        }
+      ]
+    },
+    {
+      "holiday_year": 2027,
+      "title_zh": "国务院办公厅关于2027年部分节假日安排的通知",
+      "title_en": "General Office of the State Council Notice on the 2027 Public Holiday Arrangements",
+      "source_url": "https://www.gov.cn/zhengce/content/202611/content_7085101.htm",
+      "published_at": "2026-11-05",
+      "holiday_lines": [
+        {
+          "holiday_name_zh": "元旦",
+          "holiday_name_en": "New Year's Day",
+          "line_zh": "一、元旦： 1月1日（周五）至3日（周日）放假，共3天。",
+          "line_en": "New Year's Day: holiday from Jan 1, 2027 to Jan 3, 2027.",
+          "holiday_dates": [
+            "2027-01-01",
+            "2027-01-02",
+            "2027-01-03"
+          ],
+          "workday_dates": []
+        },
+        {
+          "holiday_name_zh": "春节",
+          "holiday_name_en": "Spring Festival",
+          "line_zh": "二、春节： 2月5日（农历除夕、周五）至13日（农历正月初八、周六）放假调休，共9天。1月31日（周日）、2月14日（周日）上班。",
+          "line_en": "Spring Festival: holiday from Feb 5, 2027 to Feb 13, 2027. Compensated working day(s): Jan 31, 2027, and Feb 14, 2027.",
+          "holiday_dates": [
+            "2027-02-05",
+            "2027-02-06",
+            "2027-02-07",
+            "2027-02-08",
+            "2027-02-09",
+            "2027-02-10",
+            "2027-02-11",
+            "2027-02-12",
+            "2027-02-13"
+          ],
+          "workday_dates": [
+            "2027-01-31",
+            "2027-02-14"
+          ]
+        },
+        {
+          "holiday_name_zh": "清明节",
+          "holiday_name_en": "Qingming Festival",
+          "line_zh": "三、清明节： 4月3日（周六）至5日（周一）放假，共3天。",
+          "line_en": "Qingming Festival: holiday from Apr 3, 2027 to Apr 5, 2027.",
+          "holiday_dates": [
+            "2027-04-03",
+            "2027-04-04",
+            "2027-04-05"
+          ],
+          "workday_dates": []
+        },
+        {
+          "holiday_name_zh": "劳动节",
+          "holiday_name_en": "Labour Day",
+          "line_zh": "四、劳动节： 5月1日（周六）至5日（周三）放假调休，共5天。5月8日（周六）上班。",
+          "line_en": "Labour Day: holiday from May 1, 2027 to May 5, 2027. Compensated working day(s): May 8, 2027.",
+          "holiday_dates": [
+            "2027-05-01",
+            "2027-05-02",
+            "2027-05-03",
+            "2027-05-04",
+            "2027-05-05"
+          ],
+          "workday_dates": [
+            "2027-05-08"
+          ]
+        },
+        {
+          "holiday_name_zh": "端午节",
+          "holiday_name_en": "Dragon Boat Festival",
+          "line_zh": "五、端午节： 6月9日（周三）放假，共1天。",
+          "line_en": "Dragon Boat Festival: holiday on Jun 9, 2027.",
+          "holiday_dates": [
+            "2027-06-09"
+          ],
+          "workday_dates": []
+        },
+        {
+          "holiday_name_zh": "中秋节",
+          "holiday_name_en": "Mid-Autumn Festival",
+          "line_zh": "六、中秋节： 9月15日（周三）放假，共1天。",
+          "line_en": "Mid-Autumn Festival: holiday on Sep 15, 2027.",
+          "holiday_dates": [
+            "2027-09-15"
+          ],
+          "workday_dates": []
+        },
+        {
+          "holiday_name_zh": "国庆节",
+          "holiday_name_en": "National Day",
+          "line_zh": "七、国庆节： 10月1日（周五）至7日（周四）放假调休，共7天。9月26日（周日）、10月9日（周六）上班。",
+          "line_en": "National Day: holiday from Oct 1, 2027 to Oct 7, 2027. Compensated working day(s): Sep 26, 2027, and Oct 9, 2027.",
+          "holiday_dates": [
+            "2027-10-01",
+            "2027-10-02",
+            "2027-10-03",
+            "2027-10-04",
+            "2027-10-05",
+            "2027-10-06",
+            "2027-10-07"
+          ],
+          "workday_dates": [
+            "2027-09-26",
+            "2027-10-09"
           ]
         }
       ]
